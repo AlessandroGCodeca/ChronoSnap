@@ -59,8 +59,8 @@ const ZoomableImage: React.FC<ZoomableImageProps> = ({ src, alt, className = '',
   const onMouseUp = () => setIsDragging(false);
 
   return (
-    <div
-      ref={containerRef}
+    <div 
+      ref={containerRef} 
       className={`relative overflow-hidden touch-none group ${className}`}
       onWheel={handleWheel}
       onMouseDown={onMouseDown}
@@ -80,18 +80,18 @@ const ZoomableImage: React.FC<ZoomableImageProps> = ({ src, alt, className = '',
         draggable={false}
         onClick={scale === 1 ? zoomIn : undefined}
       />
-
+      
       {/* Controls Overlay */}
       <div className={`absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-slate-900/80 backdrop-blur-md rounded-full px-4 py-2 border border-slate-700 transition-opacity duration-300 ${scale > 1 ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
-        <button onClick={zoomOut} className="p-1 hover:text-indigo-400 transition-colors" title="Zoom Out" aria-label="Zoom out">
+        <button onClick={zoomOut} className="p-1 hover:text-indigo-400 transition-colors" title="Zoom Out">
           <ZoomOut size={16} />
         </button>
         <span className="text-xs font-mono w-12 text-center text-slate-300">{Math.round(scale * 100)}%</span>
-        <button onClick={zoomIn} className="p-1 hover:text-indigo-400 transition-colors" title="Zoom In" aria-label="Zoom in">
+        <button onClick={zoomIn} className="p-1 hover:text-indigo-400 transition-colors" title="Zoom In">
           <ZoomIn size={16} />
         </button>
         <div className="w-px h-4 bg-slate-600 mx-1"></div>
-        <button onClick={reset} className="p-1 hover:text-indigo-400 transition-colors" title="Reset" aria-label="Reset zoom">
+        <button onClick={reset} className="p-1 hover:text-indigo-400 transition-colors" title="Reset">
           <Maximize size={16} />
         </button>
       </div>
