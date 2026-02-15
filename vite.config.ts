@@ -5,14 +5,14 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, process.cwd(), '');
     return {
-      base: '/ChronoSnap/',
       server: {
         port: 3000,
         host: '0.0.0.0',
       },
       plugins: [react()],
       define: {
-        'process.env.API_KEY': JSON.stringify(process.env.API_KEY || env.API_KEY || env.GEMINI_API_KEY)
+        // This ensures Vercel passes your secret key safely into the app
+        'process.env.API_KEY': JSON.stringify(process.env.GEMINI_API_KEY || env.API_KEY || env.GEMINI_API_KEY)
       },
       resolve: {
         alias: {
