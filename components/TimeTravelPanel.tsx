@@ -107,42 +107,43 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
         <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-200 to-indigo-400 tracking-wide brand-font">
           SELECT TIMELINE
         </h2>
-        <div className="h-1 w-20 bg-gradient-to-r from-transparent via-indigo-500 to-transparent mx-auto opacity-50"></div>
-        <p className="text-slate-400 text-xs uppercase tracking-widest pt-2">Choose your destination coordinates</p>
+        <div className="h-0.5 w-20 bg-gradient-to-r from-transparent via-indigo-500 to-transparent mx-auto opacity-70"></div>
+        <p className="text-slate-400 text-xs uppercase tracking-widest pt-2">Choose destination coordinates</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar pb-2">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar pb-2">
         {ERAS.map((era) => (
           <button
             key={era.id}
             onClick={() => handlePresetSelect(era)}
             disabled={isProcessing}
             className={`
-              relative p-4 rounded-xl text-left group transition-all duration-300 overflow-hidden flex flex-col gap-3
+              relative p-3 rounded-xl text-left group transition-all duration-300 overflow-hidden flex flex-col gap-2
               ${selectedEra?.id === era.id 
-                ? 'bg-indigo-900/40 border-2 border-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.4)] ring-1 ring-indigo-400/50' 
-                : 'bg-slate-900/40 border border-white/5 hover:border-indigo-500/30 hover:bg-slate-800/60'
+                ? 'bg-indigo-900/40 border-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.4)] ring-1 ring-indigo-400/50 scale-105 z-10' 
+                : 'bg-slate-900/40 border-transparent hover:border-indigo-500/30 hover:bg-slate-800/60'
               }
+              border
             `}
           >
             {selectedEra?.id === era.id && (
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent pointer-events-none" />
             )}
             
-            <div className="flex justify-between items-start z-10">
-              <span className="text-3xl filter drop-shadow-md transform group-hover:scale-110 transition-transform duration-300">{era.icon}</span>
+            <div className="flex justify-between items-center z-10">
+              <span className="text-2xl filter drop-shadow-md transform group-hover:scale-110 transition-transform duration-300">{era.icon}</span>
               {selectedEra?.id === era.id && (
-                <div className="bg-indigo-500 text-white rounded-full p-1 shadow-lg animate-in zoom-in duration-300">
-                  <Check size={14} strokeWidth={3} />
+                <div className="bg-indigo-500 text-white rounded-full p-0.5 shadow-lg animate-in zoom-in duration-300">
+                  <Check size={12} strokeWidth={3} />
                 </div>
               )}
             </div>
 
             <div className="z-10">
-              <h3 className={`font-bold text-sm ${selectedEra?.id === era.id ? 'text-indigo-200' : 'text-slate-200 group-hover:text-indigo-200'}`}>
+              <h3 className={`font-bold text-xs truncate ${selectedEra?.id === era.id ? 'text-indigo-200' : 'text-slate-200 group-hover:text-indigo-200'}`}>
                 {era.name}
               </h3>
-              <p className="text-xs text-slate-500 leading-relaxed mt-1 line-clamp-2 group-hover:text-slate-400">
+              <p className={`text-[10px] leading-tight mt-0.5 line-clamp-2 ${selectedEra?.id === era.id ? 'text-indigo-300/80' : 'text-slate-500 group-hover:text-slate-400'}`}>
                 {era.description}
               </p>
             </div>
@@ -152,15 +153,18 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
 
       {/* Historical Figure Selector */}
       <div className="space-y-3 relative z-20" ref={dropdownRef}>
-        <label className="text-xs font-bold text-slate-500 uppercase tracking-wider ml-1">
-          Add Historical Figure (Optional)
-        </label>
+        <div className="flex items-center gap-2">
+           <User size={14} className="text-indigo-400" />
+           <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            Historical Companion
+           </label>
+        </div>
         
         <div className="relative">
           <button
             type="button"
             onClick={toggleDropdown}
-            className={`w-full flex items-center justify-between bg-slate-900/60 border ${isDropdownOpen ? 'border-indigo-500 ring-1 ring-indigo-500/50' : 'border-white/10 hover:border-white/20'} rounded-xl px-4 py-3 text-sm transition-all text-slate-300 hover:text-white`}
+            className={`w-full flex items-center justify-between bg-slate-900/60 border ${isDropdownOpen ? 'border-indigo-500 ring-1 ring-indigo-500/50' : 'border-white/10 hover:border-white/20'} rounded-xl px-4 py-3 text-sm transition-all text-slate-300 hover:text-white backdrop-blur-sm`}
           >
              <div className="flex items-center gap-3">
                {selectedFigure ? (
@@ -169,10 +173,7 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
                    <span className="font-medium text-indigo-300">{selectedFigure.name}</span>
                  </>
                ) : (
-                 <>
-                   <User size={16} className="text-slate-500" />
-                   <span className="text-slate-400">Select a figure...</span>
-                 </>
+                 <span className="text-slate-500 italic">Select a figure to join you...</span>
                )}
              </div>
              {selectedFigure ? (
@@ -180,7 +181,7 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
                  onClick={(e) => { e.stopPropagation(); setSelectedFigure(null); }}
                  className="p-1 hover:bg-white/10 rounded-full"
                >
-                 <span className="text-xs text-slate-500">Clear</span>
+                 <span className="text-xs text-slate-500 hover:text-white transition-colors">Clear</span>
                </div>
              ) : (
                <ChevronDown size={16} className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
@@ -188,16 +189,16 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
           </button>
 
           {isDropdownOpen && (
-            <div className="absolute top-full left-0 right-0 mt-2 bg-slate-900 border border-slate-700 rounded-xl shadow-2xl max-h-60 overflow-hidden flex flex-col z-50 animate-in fade-in zoom-in-95 duration-200">
-              <div className="p-2 border-b border-slate-800 sticky top-0 bg-slate-900 z-10">
+            <div className="absolute top-full left-0 right-0 mt-2 bg-slate-900/95 border border-slate-700 rounded-xl shadow-2xl max-h-60 overflow-hidden flex flex-col z-50 animate-in fade-in zoom-in-95 duration-200 backdrop-blur-xl">
+              <div className="p-2 border-b border-slate-800 sticky top-0 bg-slate-900/95 z-10">
                 <div className="relative">
                   <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
                   <input
                     type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search figures..."
-                    className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-9 pr-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500"
+                    placeholder="Search archives..."
+                    className="w-full bg-black/40 border border-slate-700 rounded-lg pl-9 pr-3 py-2 text-xs text-white focus:outline-none focus:border-indigo-500 placeholder-slate-600"
                     autoFocus
                   />
                 </div>
@@ -211,18 +212,18 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
                         setSelectedFigure(figure);
                         setIsDropdownOpen(false);
                       }}
-                      className="w-full flex items-center gap-3 p-2 hover:bg-slate-800 rounded-lg transition-colors text-left"
+                      className="w-full flex items-center gap-3 p-2 hover:bg-indigo-900/30 rounded-lg transition-colors text-left group"
                     >
                       <span className="text-xl w-8 text-center">{figure.icon}</span>
                       <div>
-                        <div className="text-sm font-medium text-slate-200">{figure.name}</div>
-                        <div className="text-[10px] text-slate-500">{figure.description}</div>
+                        <div className="text-sm font-medium text-slate-200 group-hover:text-white">{figure.name}</div>
+                        <div className="text-[10px] text-slate-500 group-hover:text-slate-400">{figure.description}</div>
                       </div>
                       {selectedFigure?.id === figure.id && <Check size={14} className="ml-auto text-indigo-400" />}
                     </button>
                   ))
                 ) : (
-                  <div className="p-4 text-center text-xs text-slate-500">No figures found</div>
+                  <div className="p-4 text-center text-xs text-slate-500">No figures found in database</div>
                 )}
               </div>
             </div>
@@ -230,10 +231,10 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
         </div>
       </div>
 
-      <div className="flex items-center gap-4 py-2">
-        <div className="h-px bg-white/10 flex-1"></div>
-        <span className="text-[10px] font-bold text-slate-600 uppercase tracking-widest">Or Custom Paradox</span>
-        <div className="h-px bg-white/10 flex-1"></div>
+      <div className="flex items-center gap-4 py-2 opacity-50">
+        <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent flex-1"></div>
+        <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Or Input Paradox</span>
+        <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent flex-1"></div>
       </div>
 
       <div className="space-y-3">
@@ -241,9 +242,9 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
           <textarea
             value={customPrompt}
             onChange={handleCustomChange}
-            placeholder="Describe a specific time, place, or alternate reality..."
-            className={`w-full h-24 bg-black/20 border rounded-xl p-4 text-sm text-white placeholder-slate-600 focus:outline-none resize-none transition-all
-              ${customPrompt ? 'border-indigo-500/50 ring-1 ring-indigo-500/20' : 'border-white/10 focus:border-indigo-500/50'}
+            placeholder="Describe a specific time, place, or alternate reality coordinates..."
+            className={`w-full h-24 bg-black/40 border rounded-xl p-4 text-sm text-white placeholder-slate-600 focus:outline-none resize-none transition-all font-mono
+              ${customPrompt ? 'border-indigo-500/50 ring-1 ring-indigo-500/20 shadow-[0_0_15px_rgba(99,102,241,0.1)]' : 'border-white/10 focus:border-indigo-500/50'}
             `}
             disabled={isProcessing}
           />
@@ -251,53 +252,53 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
             variant="ghost" 
             size="sm"
             onClick={handleSurpriseMe}
-            className="absolute bottom-2 right-2 text-xs text-indigo-400 hover:text-indigo-300 hover:bg-indigo-500/10"
+            className="absolute bottom-2 right-2 text-xs text-indigo-400 hover:text-indigo-300 hover:bg-indigo-500/10 border border-indigo-500/20"
             icon={<Dices size={14} />}
             type="button"
           >
-            Surprise Me
+            Randomize
           </Button>
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-4 mt-4">
+      <div className="border-t border-white/5 pt-4 mt-4 bg-black/20 rounded-xl p-4">
         <div className="flex items-center gap-2 mb-3">
            <Type size={14} className="text-indigo-400" />
            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-             Add Caption (Optional)
+             Timeline Annotation
            </label>
         </div>
         
-        <div className="bg-slate-900/40 border border-white/5 rounded-xl p-3 space-y-3">
+        <div className="space-y-3">
            <input 
              type="text" 
              value={overlayText}
              onChange={(e) => setOverlayText(e.target.value)}
              placeholder="Enter text to overlay..."
-             className="w-full bg-black/30 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:border-indigo-500/50 focus:outline-none"
+             className="w-full bg-black/30 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:border-indigo-500/50 focus:outline-none transition-all"
            />
            
            {overlayText && (
-             <div className="space-y-3 animate-in slide-in-from-top-2">
+             <div className="space-y-3 animate-in slide-in-from-top-2 pt-2">
                {/* Controls Row */}
-               <div className="flex flex-wrap items-center gap-4">
+               <div className="flex flex-wrap items-center gap-2">
                  
                  {/* Position */}
                  <div className="flex bg-black/30 rounded-lg p-1 border border-white/5">
-                   <button onClick={() => setOverlayPosition('top')} className={`p-1.5 rounded ${overlayPosition === 'top' ? 'bg-slate-700 text-white' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyStart size={16} /></button>
-                   <button onClick={() => setOverlayPosition('center')} className={`p-1.5 rounded ${overlayPosition === 'center' ? 'bg-slate-700 text-white' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyCenter size={16} /></button>
-                   <button onClick={() => setOverlayPosition('bottom')} className={`p-1.5 rounded ${overlayPosition === 'bottom' ? 'bg-slate-700 text-white' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyEnd size={16} /></button>
+                   <button onClick={() => setOverlayPosition('top')} className={`p-1.5 rounded ${overlayPosition === 'top' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyStart size={14} /></button>
+                   <button onClick={() => setOverlayPosition('center')} className={`p-1.5 rounded ${overlayPosition === 'center' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyCenter size={14} /></button>
+                   <button onClick={() => setOverlayPosition('bottom')} className={`p-1.5 rounded ${overlayPosition === 'bottom' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyEnd size={14} /></button>
                  </div>
 
                  {/* Style */}
                  <div className="flex bg-black/30 rounded-lg p-1 border border-white/5">
-                    <button onClick={() => setOverlayBold(!overlayBold)} className={`p-1.5 rounded ${overlayBold ? 'bg-slate-700 text-white' : 'text-slate-400 hover:text-white'}`}><Bold size={16} /></button>
-                    <button onClick={() => setOverlayItalic(!overlayItalic)} className={`p-1.5 rounded ${overlayItalic ? 'bg-slate-700 text-white' : 'text-slate-400 hover:text-white'}`}><Italic size={16} /></button>
+                    <button onClick={() => setOverlayBold(!overlayBold)} className={`p-1.5 rounded ${overlayBold ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><Bold size={14} /></button>
+                    <button onClick={() => setOverlayItalic(!overlayItalic)} className={`p-1.5 rounded ${overlayItalic ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><Italic size={14} /></button>
                  </div>
 
                  {/* Size */}
-                 <div className="flex items-center gap-2 bg-black/30 rounded-lg p-1 px-2 border border-white/5">
-                    <span className="text-[10px] text-slate-500 uppercase">Size</span>
+                 <div className="flex items-center gap-2 bg-black/30 rounded-lg p-1 px-2 border border-white/5 h-[34px]">
+                    <span className="text-[10px] text-slate-500 uppercase font-bold">Size</span>
                     <select 
                       value={overlaySize} 
                       onChange={(e) => setOverlaySize(e.target.value as any)}
@@ -312,12 +313,12 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
                </div>
 
                {/* Colors */}
-               <div className="flex flex-wrap gap-2">
+               <div className="flex flex-wrap gap-2 pt-1">
                  {colors.map(color => (
                    <button
                      key={color}
                      onClick={() => setOverlayColor(color)}
-                     className={`w-6 h-6 rounded-full border-2 transition-transform hover:scale-110 ${overlayColor === color ? 'border-white scale-110 shadow-lg' : 'border-transparent opacity-70 hover:opacity-100'}`}
+                     className={`w-6 h-6 rounded-full transition-all duration-300 ${overlayColor === color ? 'ring-2 ring-white scale-110 shadow-[0_0_10px_currentColor]' : 'opacity-50 hover:opacity-100 hover:scale-105'}`}
                      style={{ backgroundColor: color }}
                      aria-label={`Select color ${color}`}
                    />
@@ -335,8 +336,8 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
           isLoading={isProcessing}
           className={`w-full py-4 text-lg font-bold tracking-wide transition-all duration-500
             ${isReady 
-              ? 'bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 shadow-[0_0_30px_rgba(99,102,241,0.4)] border border-white/10' 
-              : 'bg-slate-800 text-slate-500 border border-white/5 cursor-not-allowed'
+              ? 'bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 shadow-[0_0_30px_rgba(99,102,241,0.4)] border border-white/10 hover:tracking-widest' 
+              : 'bg-slate-800 text-slate-500 border border-white/5 cursor-not-allowed grayscale'
             }
           `}
           icon={<Sparkles size={20} fill={isReady ? "currentColor" : "none"} />}

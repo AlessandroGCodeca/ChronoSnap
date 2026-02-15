@@ -1242,6 +1242,13 @@ export const ERAS: Era[] = [
     description: 'Melting clocks and floating islands.',
     prompt: 'Surrealist masterpiece. The subject is floating or distorted, wearing melting clock accessories. Background: A vast, empty desert landscape with impossible geometry, floating islands, giant eyes in the sky, long shadows, Salvador Dali and Magritte inspired, dreamlike and mysterious.',
     icon: '🎨',
+  },
+  {
+    id: 'retro-anime',
+    name: 'Retro Anime',
+    description: '90s cel-shaded animation style.',
+    prompt: 'Cinematic shot, 1990s Anime style. The subject is drawn in a vintage anime aesthetic with cel-shading, large expressive eyes, and dramatic hair. Background: A detailed hand-painted watercolor background of a city at sunset or a starry night, grain, chromatic aberration, retro TV broadcast effect, high quality animation keyframe.',
+    icon: '✨',
   }
 ];
 

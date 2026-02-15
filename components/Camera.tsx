@@ -1,6 +1,6 @@
 import React, { useRef, useState, useCallback, useEffect } from 'react';
 import Button from './Button';
-import { Camera as CameraIcon, Upload, RotateCcw, ImagePlus, Aperture, Scan } from 'lucide-react';
+import { Camera as CameraIcon, Upload, RotateCcw, ImagePlus, Aperture, Scan, Zap } from 'lucide-react';
 
 interface CameraProps {
   onCapture: (imageSrc: string) => void;
@@ -13,6 +13,7 @@ const Camera: React.FC<CameraProps> = ({ onCapture }) => {
   const [isStreamActive, setIsStreamActive] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [flash, setFlash] = useState(false);
 
   const startCamera = async () => {
     try {
@@ -40,21 +41,25 @@ const Camera: React.FC<CameraProps> = ({ onCapture }) => {
   }, []);
 
   const takePhoto = () => {
-    if (videoRef.current && canvasRef.current) {
-      const video = videoRef.current;
-      const canvas = canvasRef.current;
-      canvas.width = video.videoWidth;
-      canvas.height = video.videoHeight;
-      const ctx = canvas.getContext('2d');
-      if (ctx) {
-        ctx.translate(canvas.width, 0);
-        ctx.scale(-1, 1);
-        ctx.drawImage(video, 0, 0);
-        const imageSrc = canvas.toDataURL('image/jpeg');
-        stopCamera();
-        onCapture(imageSrc);
-      }
-    }
+    setFlash(true);
+    setTimeout(() => {
+        if (videoRef.current && canvasRef.current) {
+        const video = videoRef.current;
+        const canvas = canvasRef.current;
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        const ctx = canvas.getContext('2d');
+        if (ctx) {
+            ctx.translate(canvas.width, 0);
+            ctx.scale(-1, 1);
+            ctx.drawImage(video, 0, 0);
+            const imageSrc = canvas.toDataURL('image/jpeg');
+            stopCamera();
+            onCapture(imageSrc);
+        }
+        }
+        setFlash(false);
+    }, 150);
   };
 
   const processFile = (file: File) => {
@@ -116,6 +121,9 @@ const Camera: React.FC<CameraProps> = ({ onCapture }) => {
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
       >
+        {/* Flash Overlay */}
+        <div className={`absolute inset-0 bg-white z-50 pointer-events-none transition-opacity duration-150 ${flash ? 'opacity-100' : 'opacity-0'}`}></div>
+
         {/* Viewfinder Overlay Elements */}
         {isStreamActive && (
           <div className="absolute inset-0 pointer-events-none z-10">
@@ -140,9 +148,8 @@ const Camera: React.FC<CameraProps> = ({ onCapture }) => {
              </div>
 
              <div className="absolute bottom-8 right-8 font-mono text-[10px] text-indigo-300/80 tracking-widest flex flex-col items-end gap-1">
-                 <span>ISO 800</span>
-                 <span>F/2.4</span>
-                 <span>1/60</span>
+                 <span className="flex items-center gap-1"><Zap size={10} /> SENSORS ACTIVE</span>
+                 <span>ISO 800 • F/2.4 • 1/60</span>
              </div>
           </div>
         )}
@@ -158,7 +165,7 @@ const Camera: React.FC<CameraProps> = ({ onCapture }) => {
         {!isStreamActive && !isDragging && (
           <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-500 space-y-6 p-6 text-center pointer-events-none">
             <div className="relative">
-              <div className="absolute inset-0 bg-indigo-500/20 rounded-full blur-xl"></div>
+              <div className="absolute inset-0 bg-indigo-500/20 rounded-full blur-xl animate-pulse"></div>
               <div className="relative w-24 h-24 rounded-full bg-slate-900 flex items-center justify-center border border-slate-700 shadow-xl">
                   <Scan size={40} className="text-slate-400" />
               </div>

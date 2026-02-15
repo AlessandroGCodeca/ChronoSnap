@@ -1,4 +1,4 @@
-import { GoogleGenAI, GenerateContentResponse } from "@google/genai";
+import { GoogleGenAI, GenerateContentResponse, HarmCategory, HarmBlockThreshold } from "@google/genai";
 
 // Helper to clean base64 string
 const cleanBase64 = (base64: string) => {
@@ -27,16 +27,16 @@ export const generateTimeTravelImage = async (
     let finalPrompt = `
       You are a cinematic photo editor. 
       Input: An image of a person.
-      Task: Transport this person into the following historical/fictional setting: ${eraPrompt}.
-      Requirements:
-      - Maintain the facial features and identity of the person in the input image.
-      - Change their clothing to match the era perfectly.
-      - Change the background to a high-quality, photorealistic scene from that era.
-      - Ensure lighting and composition are cinematic.
+      Task: Create a high-quality, photorealistic image of this person in the following setting: ${eraPrompt}.
+      Instructions:
+      - The subject should be wearing period-appropriate clothing matching the era.
+      - The background should be a detailed, cinematic scene from that era.
+      - Maintain the general likeness, gender, and expression of the person.
+      - Ensure high aesthetic quality, perfect lighting, and composition.
     `;
 
     if (figurePrompt) {
-      finalPrompt += `\n      - IMPORTANT: The person MUST be depicted standing next to or interacting with ${figurePrompt}. Ensure the historical figure looks authentic.`;
+      finalPrompt += `\n      - The person should be depicted standing next to or interacting with ${figurePrompt}.`;
     }
 
     finalPrompt += `\n      - Return ONLY the generated image.`;
@@ -56,6 +56,15 @@ export const generateTimeTravelImage = async (
           },
         ],
       },
+      config: {
+        safetySettings: [
+          { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
+          { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
+          { category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
+          { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
+          { category: HarmCategory.HARM_CATEGORY_CIVIC_INTEGRITY, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH }
+        ],
+      }
     });
 
     // Extract image from response safely
@@ -108,6 +117,15 @@ export const editImageWithPrompt = async (
           },
         ],
       },
+      config: {
+        safetySettings: [
+          { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
+          { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
+          { category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
+          { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
+          { category: HarmCategory.HARM_CATEGORY_CIVIC_INTEGRITY, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH }
+        ],
+      }
     });
 
     // Extract image from response safely
@@ -157,8 +175,15 @@ export const analyzeImage = async (
         ],
       },
       config: {
-        // Using a lower thinking budget for faster analysis, or 0 if speed is critical
-        thinkingConfig: { thinkingBudget: 1024 } 
+        // Using a lower thinking budget for faster analysis
+        thinkingConfig: { thinkingBudget: 1024 },
+        safetySettings: [
+          { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
+          { category: HarmCategory.HARM_CATEGORY_HATE_SPEECH, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
+          { category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
+          { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
+          { category: HarmCategory.HARM_CATEGORY_CIVIC_INTEGRITY, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH }
+        ],
       }
     });
 
