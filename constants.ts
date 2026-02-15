@@ -5,910 +5,910 @@ export const HISTORICAL_FIGURES: HistoricalFigure[] = [
     id: 'einstein', 
     name: 'Albert Einstein', 
     description: 'Theoretical Physicist', 
-    prompt: 'Portrait of Albert Einstein in his later years, wild white hair and mustache, wearing a rumpled grey sweater, writing E=mc² on a dusty blackboard in a cluttered study, soft natural light, highly detailed.', 
+    prompt: 'Hyper-realistic portrait of Albert Einstein in 1950, featuring his iconic wild white hair and bushy mustache. He is wearing a cozy, rumpled grey cardigan sweater and a white collared shirt. He stands before a dusty slate blackboard covered in complex mathematical formulas written in chalk. The setting is his cluttered Princeton study, filled with books and papers. Soft, natural window light illuminates his thoughtful expression. Cinematic lighting, 8k resolution.', 
     icon: '🧪' 
   },
   { 
     id: 'cleopatra', 
     name: 'Cleopatra', 
     description: 'Queen of the Nile', 
-    prompt: 'Queen Cleopatra VII of Egypt, regal and imposing, wearing a golden uraeus headdress and intricate beaded collar, sitting on a throne with hieroglyphs in the background, cinematic lighting.', 
+    prompt: 'Cinematic shot of Queen Cleopatra VII of Egypt, radiating regal power. She wears a golden vulture headdress (Nekhbet) and an intricate beaded broad collar (wesekh) over a fine pleated white linen kalasiris. Her makeup includes heavy kohl eyeliner and gold dust. She sits on a gilded throne with hieroglyphs carved into the stone walls behind her. Warm, golden torchlight flickers, creating dramatic shadows. Photorealistic, detailed texture.', 
     icon: '👑' 
   },
   { 
     id: 'shakespeare', 
     name: 'Wm. Shakespeare', 
     description: 'The Bard', 
-    prompt: 'William Shakespeare in his study, wearing a white ruff collar and doublet, holding a quill pen, parchment papers scattered on a wooden desk, candlelit atmosphere.', 
+    prompt: 'William Shakespeare in his Elizabethan study, 1600. He wears a black doublet with a white ruff collar and cuffs. He holds a quill pen, poised over a parchment manuscript on a rough wooden desk scattered with inkwells and papers. The room is dimly lit by a tallow candle, casting a warm glow on his face and receding hairline. Atmospheric, painterly style reminiscent of Rembrandt.', 
     icon: '✒️' 
   },
   { 
     id: 'earhart', 
     name: 'Amelia Earhart', 
     description: 'Aviation Pioneer', 
-    prompt: 'Amelia Earhart standing confidently next to a Lockheed Electra airplane, wearing a leather flight jacket, scarf, and aviator goggles, windblown hair, golden hour sunlight.', 
+    prompt: 'Amelia Earhart standing confidently on an airfield runway next to her Lockheed Electra 10E. She wears a distressed brown leather flight jacket with a fur collar, tan trousers, a silk scarf, and vintage aviator goggles resting on her forehead. Her short, windblown hair catches the golden hour sunlight. The sky is a clear azure blue. High definition, historical photography style.', 
     icon: '✈️' 
   },
   { 
     id: 'tesla', 
     name: 'Nikola Tesla', 
     description: 'Master of Lightning', 
-    prompt: 'Nikola Tesla in his laboratory, surrounded by large electrical coils emitting purple lightning sparks, wearing a formal 19th-century suit, intense gaze, atmospheric lighting.', 
+    prompt: 'Nikola Tesla in his Colorado Springs laboratory, 1899. He sits calmly in a wooden chair, reading a book, while massive magnifying transmitters emit terrifyingly large arcs of purple electrical lightning around him. He wears a formal Victorian three-piece suit. The lighting is dramatic, dominated by the glow of the electrical discharge. Surreal, cinematic composition.', 
     icon: '⚡' 
   },
   { 
     id: 'da-vinci', 
     name: 'Leonardo da Vinci', 
     description: 'Renaissance Man', 
-    prompt: 'Leonardo da Vinci, elderly with a long beard, wearing Renaissance robes, holding a sketchbook and charcoal, standing in a studio filled with inventions and art, soft window light.', 
+    prompt: 'Leonardo da Vinci in his Florence workshop, appearing as an elderly sage with a long, flowing white beard and shoulder-length hair. He wears a velvet renaissance robe and a beret. He is examining a complex mechanical gear prototype on a wooden table, surrounded by anatomical sketches and painting supplies. Soft, diffused northern window light. Renaissance oil painting aesthetic.', 
     icon: '🎨' 
   },
   { 
     id: 'marilyn', 
     name: 'Marilyn Monroe', 
     description: 'Hollywood Icon', 
-    prompt: 'Marilyn Monroe in a glamorous white halter dress, standing over a subway grate with the dress billowing, iconic blonde curls, bright city lights in the background, cinematic 1950s style.', 
+    prompt: 'Marilyn Monroe capturing her iconic moment on a New York City subway grate. She wears the famous white pleated halter dress, which billows around her legs. Her platinum blonde curls are perfectly styled, and she has her signature red lipstick and beauty mark. The background shows blurred city lights and vintage cars at night. Glamorous, high-contrast 1950s cinematic style.', 
     icon: '🎬' 
   },
   { 
     id: 'napoleon', 
     name: 'Napoleon', 
     description: 'Emperor of France', 
-    prompt: 'Emperor Napoleon Bonaparte in full military regalia, hand tucked into his vest, standing on a battlefield with smoke and soldiers in the distance, dramatic sky.', 
+    prompt: 'Emperor Napoleon Bonaparte in his study at Tuileries Palace. He stands in his classic pose with one hand tucked into his vest, wearing his green Colonel uniform of the Chasseurs à Cheval, adorned with medals and a red sash. A bicorne hat sits on a nearby map-covered table. The background features opulent French Empire furniture. Stern, commanding expression. Oil painting style.', 
     icon: '🇫🇷' 
   },
   { 
     id: 'lincoln', 
     name: 'Abraham Lincoln', 
     description: '16th US President', 
-    prompt: 'Abraham Lincoln, tall and solemn, wearing a black suit and stovepipe hat, standing in front of the White House pillars, moody lighting, texture of the era.', 
+    prompt: 'Abraham Lincoln, towering and solemn, standing on the portico of the White House during the Civil War. He wears his signature black frock coat, bowtie, and tall stovepipe hat. His face is weathered and bearded, eyes deep-set and melancholic. The background features the incomplete Washington Monument in the distance. Sepia-toned, daguerreotype photography style.', 
     icon: '🎩' 
   },
   { 
     id: 'joan-of-arc', 
     name: 'Joan of Arc', 
     description: 'The Maid of Orléans', 
-    prompt: 'Joan of Arc clad in shining medieval plate armor, holding a white banner with fleurs-de-lis, looking upward with spiritual intensity, battlefield background, dramatic lighting.', 
+    prompt: 'Joan of Arc on the battlefield, 1429. She is clad in shining, battle-worn plate armor, holding a white banner embroidered with fleurs-de-lis. Her hair is cropped short. She looks upward with spiritual intensity and determination. The background shows smoke, medieval tents, and soldiers in the distance. Dramatic, high-contrast lighting, heroic composition.', 
     icon: '⚔️' 
   },
   { 
     id: 'elvis', 
     name: 'Elvis Presley', 
     description: 'King of Rock', 
-    prompt: 'Elvis Presley in a white sequined jumpsuit with a high collar, performing on stage with a microphone, sweat glistening, bright stage lights, 1970s Las Vegas vibe.', 
+    prompt: 'Elvis Presley performing live in Las Vegas, 1970s. He wears the iconic white "Aloha from Hawaii" jumpsuit with an intricately embroidered eagle and a high collar, plus a red lei. He holds a microphone, sweating, with jet-black hair perfectly coiffed. Stage lights flare in the background, creating a halo effect. Vibrant, energetic concert photography style.', 
     icon: '🎸' 
   },
   { 
     id: 'mozart', 
     name: 'Mozart', 
     description: 'Musical Prodigy', 
-    prompt: 'Wolfgang Amadeus Mozart playing a fortepiano, wearing a red velvet frock coat and powdered wig, in an ornate Rococo music room, candlelit.', 
+    prompt: 'Wolfgang Amadeus Mozart composing at a fortepiano in a Vienna apartment. He wears a powdered wig tied with a ribbon, a red velvet frock coat with gold braid, and a lace jabot. Sheet music is scattered frantically across the instrument. The room is ornate with Rococo decor and lit by candlelight. Playful yet focused expression. Classical art style.', 
     icon: '🎼' 
   },
   { 
     id: 'frida', 
     name: 'Frida Kahlo', 
     description: 'Painter', 
-    prompt: 'Frida Kahlo, self-portrait style, wearing a traditional Tehuana dress and floral headdress, unibrow, surrounded by tropical plants and monkeys, vibrant colors.', 
+    prompt: 'Frida Kahlo in a lush garden at Casa Azul. She wears a traditional Tehuana dress with colorful embroidery, a rebozo shawl, and an elaborate floral headdress. Her unibrow and faint mustache are distinct. A small monkey sits on her shoulder. The background is filled with vibrant tropical plants and cacti. Surrealist, vivid color palette.', 
     icon: '🌺' 
   },
   { 
     id: 'bruce-lee', 
     name: 'Bruce Lee', 
     description: 'Martial Arts Legend', 
-    prompt: 'Bruce Lee in his iconic yellow jumpsuit with black stripes, holding a fighting stance, muscles defined, intense focus, dojo background.', 
+    prompt: 'Bruce Lee in a fighting stance, muscles tense and defined. He wears his iconic yellow tracksuit with black stripes. He holds nunchaku under one arm. The background is a traditional wooden dojo with paper screens. His expression is one of intense focus and discipline. Action movie cinematic lighting, sharp focus.', 
     icon: '👊' 
   },
   { 
     id: 'gandhi', 
     name: 'Mahatma Gandhi', 
     description: 'Civil Rights Leader', 
-    prompt: 'Mahatma Gandhi, frail but strong, wearing a simple white dhoti and round glasses, spinning thread on a charkha wheel, peaceful expression, soft daylight.', 
+    prompt: 'Mahatma Gandhi sitting cross-legged on a floor mat. He is frail, wearing a simple white hand-spun dhoti and round wire-rimmed spectacles. He is spinning thread on a traditional wooden charkha. The setting is simple and ascetic, bathed in soft, natural daylight. Peaceful, contemplative atmosphere. Black and white historical photo style.', 
     icon: '🕊️' 
   },
   { 
     id: 'curie', 
     name: 'Marie Curie', 
     description: 'Nobel Scientist', 
-    prompt: 'Marie Curie in a chemistry laboratory, wearing a simple dark dress, examining a glowing test tube containing radium, surrounded by glass equipment, blue-tinged lighting.', 
+    prompt: 'Marie Curie in her Paris laboratory, 1910. She wears a simple dark Victorian dress with a high collar. She is peering closely at a glass flask containing a glowing blue radioactive substance. The lab is filled with glass beakers, test tubes, and scientific instruments. Moody, atmospheric lighting with a blue tint from the radium. Historical realism.', 
     icon: '🔬' 
   },
   { 
     id: 'mlk', 
     name: 'Martin Luther King Jr.', 
     description: 'Civil Rights Icon', 
-    prompt: 'Martin Luther King Jr. delivering a speech at a podium, wearing a dark suit and tie, crowd in the background blurred, expression of passion and hope, historic 1960s tone.', 
+    prompt: 'Martin Luther King Jr. delivering his "I Have a Dream" speech at the Lincoln Memorial. He wears a sharp black suit, white shirt, and tie. He stands behind a podium made of microphones, arm raised in passion. The background shows the blurry white marble columns and a massive crowd. Hopeful, historic, sun-drenched atmosphere.', 
     icon: '🎙️' 
   },
   { 
     id: 'elizabeth-i', 
     name: 'Queen Elizabeth I', 
     description: 'Tudor Queen', 
-    prompt: 'Queen Elizabeth I in a magnificent jewel-encrusted gown with a massive lace ruff, pale makeup and red wig, standing in a throne room, regal and commanding.', 
+    prompt: 'Queen Elizabeth I in the Armada Portrait style. She wears a magnificent, wide dress encrusted with pearls and jewels, a massive lace ruff, and a red wig. Her face is painted white. She rests her hand on a globe. The background features dark velvet curtains and a window showing ships at sea. Regal, imposing, highly detailed oil painting style.', 
     icon: '👸' 
   },
   { 
     id: 'van-gogh', 
     name: 'Vincent van Gogh', 
     description: 'Post-Impressionist', 
-    prompt: 'Vincent van Gogh, intense expression, red beard, bandage on ear, painting at an easel in a wheat field, swirling impasto style brushstrokes in the background.', 
+    prompt: 'Vincent van Gogh painting outdoors in a wheat field in Arles. He has a red beard, a straw hat, and a bandage over his ear. He wears a blue painter\'s smock. The sky is a swirling turbulent blue with yellow stars. The entire image has a thick impasto texture, mimicking his brushstroke style. Vibrant, emotional, post-impressionist.', 
     icon: '🌻' 
   },
   { 
     id: 'rosa-parks', 
     name: 'Rosa Parks', 
     description: 'Mother of Freedom', 
-    prompt: 'Rosa Parks, dignified and calm, sitting on a bus seat looking out the window, wearing a 1950s coat and hat, soft lighting.', 
+    prompt: 'Rosa Parks sitting dignified on a bus seat in Montgomery, 1955. She wears a cloth coat, a hat with a small feather, and rimless glasses. She looks out the window with a calm, resolute expression. The bus interior features vintage advertisements and vinyl seats. Soft, natural lighting. Historical black and white photography style.', 
     icon: '🚌' 
   },
   { 
     id: 'caesar', 
     name: 'Julius Caesar', 
     description: 'Roman Dictator', 
-    prompt: 'Julius Caesar in a white toga with a purple border and a gold laurel wreath, standing in the Roman Senate, commanding attention, marble columns background.', 
+    prompt: 'Julius Caesar addressing the Senate. He wears a white toga praetexta with a purple border and a golden laurel wreath on his head. He stands with an authoritative posture, pointing forward. The background features marble columns, statues, and other senators in togas. Sunlight streams through the open roof. Classical, realistic style.', 
     icon: '🏛️' 
   },
   { 
     id: 'darwin', 
     name: 'Charles Darwin', 
     description: 'Evolutionary Biologist', 
-    prompt: 'Charles Darwin, elderly with a long white beard, wearing a heavy coat, examining a finch or fossil in a natural setting, detailed texture.', 
+    prompt: 'Charles Darwin as an elderly man, walking in a lush garden (Down House). He has a long white beard and a receding hairline, wearing a heavy dark coat and a wide-brimmed hat. He is examining an orchid with a magnifying glass. The background is filled with botanical details. Naturalistic, detailed style.', 
     icon: '🐢' 
   },
   { 
     id: 'churchill', 
     name: 'Winston Churchill', 
     description: 'Wartime Prime Minister', 
-    prompt: 'Winston Churchill in a pinstripe suit and bow tie, holding a cigar, flashing the V for Victory sign, standing in front of 10 Downing Street.', 
+    prompt: 'Winston Churchill standing in the ruins of London during the Blitz, defiant. He wears a dark pinstripe suit, a bow tie, and a Homburg hat. He holds a cigar in one hand and flashes the "V for Victory" sign with the other. Smoke and rubble are in the background. Gritty, black and white newsreel style.', 
     icon: '✌️' 
   },
   { 
     id: 'beethoven', 
     name: 'Ludwig van Beethoven', 
     description: 'Classical Composer', 
-    prompt: 'Ludwig van Beethoven, wild grey hair, intense expression, composing furiously at a piano with sheet music scattered, dramatic lighting.', 
+    prompt: 'Ludwig van Beethoven in a Vienna music room, looking wild and disheveled. He has messy grey hair and an intense, brooding expression. He sits at a grand piano, holding a quill, with crumpled sheet music scattered on the floor. Dramatic, moody lighting (chiaroscuro). Romantic era oil painting style.', 
     icon: '🎹' 
   },
   { 
     id: 'alexander', 
     name: 'Alexander the Great', 
     description: 'King of Macedonia', 
-    prompt: 'Alexander the Great riding his horse Bucephalus, wearing golden armor and a lion helmet, leading a cavalry charge, dust and motion.', 
+    prompt: 'Alexander the Great leading a cavalry charge. He rides his black horse Bucephalus. He wears a golden muscle cuirass, a helmet shaped like a lion\'s head, and a flowing red cape. He wields a xyston spear. Dust kicks up around him. The background is a chaotic ancient battlefield. Epic, cinematic action shot.', 
     icon: '🐴' 
   },
   { 
     id: 'genghis', 
     name: 'Genghis Khan', 
     description: 'Mongol Emperor', 
-    prompt: 'Genghis Khan in fur-lined leather armor, riding a horse on the Mongolian steppe, holding a bow, vast landscape background.', 
+    prompt: 'Genghis Khan mounted on a sturdy Mongol horse on the steppes. He wears heavy fur-lined leather armor and a helmet with a horsehair plume. He holds a composite bow. His face is weathered and fierce. The background is a vast, grassy plain under a wide blue sky with yurts in the distance. Historical realism.', 
     icon: '🏹' 
   },
   { 
     id: 'victoria', 
     name: 'Queen Victoria', 
     description: 'Queen of the UK', 
-    prompt: 'Queen Victoria in her later years, wearing a black mourning dress and a small diamond crown, sitting on a throne, regal and stern.', 
+    prompt: 'Queen Victoria in her later years, the Widow of Windsor. She sits on a throne wearing a voluminous black silk mourning dress and a small white widow\'s cap topped with a miniature diamond crown. She holds a fan. Her expression is stern and imperious. The background is a lavish Victorian parlor. Royal portrait style.', 
     icon: '👑' 
   },
   { 
     id: 'tubman', 
     name: 'Harriet Tubman', 
     description: 'Abolitionist', 
-    prompt: 'Harriet Tubman, wearing a headscarf and heavy coat, holding a lantern in a dark forest at night, guiding people, atmospheric and moody.', 
+    prompt: 'Harriet Tubman in a winter forest at night. She wears a heavy wool coat, a long skirt, and a headscarf. She holds a tin lantern that casts a warm glow on her face, highlighting her determination. Snow is lightly falling. Trees surround her in the darkness. Moody, atmospheric, cinematic lighting.', 
     icon: '🏮' 
   },
   { 
     id: 'armstrong', 
     name: 'Neil Armstrong', 
     description: 'First Man on Moon', 
-    prompt: 'Neil Armstrong in a bulky white Apollo spacesuit, helmet visor reflecting the lunar landscape, standing on the moon\'s surface, stark lighting, black sky.', 
+    prompt: 'Neil Armstrong standing on the lunar surface, 1969. He is encased in the white Apollo A7L spacesuit with the red commander stripes (anachronistic but iconic). His gold visor reflects the lunar module and the photographer. The sky is pitch black. The ground is grey lunar regolith. Stark, high-contrast lighting.', 
     icon: '🧑‍🚀' 
   },
   { 
     id: 'confucius', 
     name: 'Confucius', 
     description: 'Chinese Philosopher', 
-    prompt: 'Confucius, wise and elderly, wearing traditional flowing Hanfu robes, teaching students under a ginkgo tree, holding a bamboo scroll.', 
+    prompt: 'Confucius teaching in a bamboo grove. He appears as an elderly sage with a long white beard, wearing traditional flowing Hanfu robes in earth tones and a tall scholar\'s hat. He holds a bamboo scroll. Students sit attentively around him. Soft, dappled sunlight filters through the leaves. Serene, ink wash painting aesthetic.', 
     icon: '📜' 
   },
   { 
     id: 'socrates', 
     name: 'Socrates', 
     description: 'Greek Philosopher', 
-    prompt: 'Socrates, bearded and barefoot, wearing a simple Greek himation, engaging in dialogue in the Athenian Agora, marble buildings in background.', 
+    prompt: 'Socrates standing in the Agora of Athens. He is an older man with a snub nose, balding head, and beard, wearing a simple, rough himation (cloak). He is gesturing while speaking to a group of young Athenians. In the background, the Acropolis rises on the hill. Bright Mediterranean sunlight. Classical realism.', 
     icon: '🏛️' 
   },
   { 
     id: 'nightingale', 
     name: 'Florence Nightingale', 
     description: 'Lady with the Lamp', 
-    prompt: 'Florence Nightingale walking through a dimly lit hospital ward at night, holding a lamp, tending to wounded soldiers, compassionate expression.', 
+    prompt: 'Florence Nightingale walking through the wards of Scutari Hospital at night. She wears a modest Victorian nurse\'s uniform and cap. She holds a Turkish lantern (fanoos) that illuminates the wounded soldiers in beds on either side. Her expression is compassionate. dark, shadowy atmosphere with a single warm light source.', 
     icon: '⚕️' 
   },
   { 
     id: 'lovelace', 
     name: 'Ada Lovelace', 
     description: 'First Programmer', 
-    prompt: 'Ada Lovelace, wearing a Victorian evening gown, standing next to the Analytical Engine, holding mathematical notes, steampunk aesthetic.', 
+    prompt: 'Ada Lovelace standing beside the Difference Engine. She wears a structured 1840s evening gown made of dark silk with lace details. Her hair is styled in ringlets. She holds a stack of punch cards and mathematical notes. The machine behind her is a complex array of brass gears and cogs. Steampunk aesthetic, detailed.', 
     icon: '💻' 
   },
   { 
     id: 'chaplin', 
     name: 'Charlie Chaplin', 
     description: 'Silent Film Star', 
-    prompt: 'Charlie Chaplin as "The Tramp", wearing a baggy suit, bowler hat, and holding a cane, distinct mustache, black and white film aesthetic.', 
+    prompt: 'Charlie Chaplin in character as "The Tramp". He wears a tight black jacket, baggy trousers, oversized shoes, and a bowler hat. He holds a bamboo cane and sports his toothbrush mustache. He is standing on a dusty road. The image is in black and white with film grain and vignette, resembling a silent movie frame.', 
     icon: '🎥' 
   },
   { 
     id: 'marley', 
     name: 'Bob Marley', 
     description: 'Reggae Legend', 
-    prompt: 'Bob Marley performing on stage, dreadlocks flying, eyes closed in feeling, playing a Gibson Les Paul guitar, Rasta colors in background lighting.', 
+    prompt: 'Bob Marley performing on stage, eyes closed in spiritual ecstasy. He has long dreadlocks flying as he moves. He wears a denim shirt and plays a Gibson Les Paul guitar. The background is a haze of stage smoke lit by red, gold, and green lights. Vibrant, soulful, concert photography style.', 
     icon: '🇯🇲' 
   },
   { 
     id: 'ali', 
     name: 'Muhammad Ali', 
     description: 'The Greatest', 
-    prompt: 'Muhammad Ali in the boxing ring, wearing white shorts and gloves, standing over a knocked-down opponent, shouting triumphantly, camera flashes.', 
+    prompt: 'Muhammad Ali standing over a fallen opponent in the boxing ring (referencing the Liston fight). He wears white boxing trunks and gloves. He is shouting, muscles taut, radiating dominance. Camera flashes pop in the dark arena background. High contrast, gritty sports photography style.', 
     icon: '🥊' 
   },
   { 
     id: 'mandela', 
     name: 'Nelson Mandela', 
     description: 'Anti-Apartheid Leader', 
-    prompt: 'Nelson Mandela, smiling warmly, wearing a colorful patterned Madiba shirt, raising a fist in solidarity, bright outdoor setting.', 
+    prompt: 'Nelson Mandela smiling warmly, raising a fist in the ANC salute. He wears one of his signature "Madiba shirts" with a colorful, intricate pattern. He has grey hair and a kind, weathered face. The background is a sunny outdoor rally in South Africa. Hopeful, vibrant, photorealistic.', 
     icon: '🇿🇦' 
   },
   { 
     id: 'picasso', 
     name: 'Pablo Picasso', 
     description: 'Cubist Painter', 
-    prompt: 'Pablo Picasso in his studio, wearing a striped Breton shirt, holding a paintbrush, surrounded by cubist paintings and sculptures.', 
+    prompt: 'Pablo Picasso in his studio in Cannes. He wears a striped Breton shirt and shorts. He stares intensely at the camera with his piercing dark eyes. He holds a cigarette and a paintbrush. The background is cluttered with pottery, sculptures, and canvases. Black and white, artistic portrait style.', 
     icon: '🖌️' 
   },
   { 
     id: 'wright-bros', 
     name: 'Wright Brothers', 
     description: 'Aviation Pioneers', 
-    prompt: 'Orville and Wilbur Wright, wearing suits and flat caps, standing proudly next to the Wright Flyer on the sands of Kitty Hawk.', 
+    prompt: 'Orville and Wilbur Wright at Kitty Hawk, 1903. They are dressed in formal suits with stiff collars and flat caps, despite the sandy dunes. They stand proudly next to the Wright Flyer biplane. The wind is blowing their coats. The sky is overcast. Sepia-toned historical photograph style.', 
     icon: '🛫' 
   },
   { 
     id: 'newton', 
     name: 'Isaac Newton', 
     description: 'Mathematician', 
-    prompt: 'Isaac Newton, young and focused, sitting under an apple tree in a garden, holding a glass prism refracting light, 17th-century attire.', 
+    prompt: 'Isaac Newton as a young man at Woolsthorpe Manor. He sits under an apple tree in an orchard. He holds a glass prism that is refracting a beam of sunlight into a rainbow. He wears 17th-century attire: a waistcoat, breeches, and a long coat. His hair is shoulder-length and natural. Intellectual, discovery-focused composition.', 
     icon: '🍎' 
   },
   { 
     id: 'galileo', 
     name: 'Galileo Galilei', 
     description: 'Astronomer', 
-    prompt: 'Galileo Galilei, elderly and bearded, looking through a brass telescope on a balcony at night, starry sky above, Renaissance clothing.', 
+    prompt: 'Galileo Galilei standing on a balcony in Venice at night. He is an older man with a beard, wearing Renaissance robes. He is looking through a leather-bound brass telescope pointed at the moon. The night sky is filled with stars and the Milky Way. Atmospheric, sense of wonder.', 
     icon: '🔭' 
   },
   { 
     id: 'catherine', 
     name: 'Catherine the Great', 
     description: 'Empress of Russia', 
-    prompt: 'Catherine the Great of Russia, wearing an imperial gown with a blue sash and diamond crown, holding a scepter, opulent palace background.', 
+    prompt: 'Catherine the Great standing in the Hermitage. She wears a silver brocade gown with a blue sash of the Order of St. Andrew and a small diamond crown. She holds a golden scepter. Her expression is intelligent and amused. The background is a lavish palace interior with gold leaf and mirrors. Opulent, royal portraiture.', 
     icon: '🇷🇺' 
   },
   { 
     id: 'tut', 
     name: 'King Tut', 
     description: 'Boy King', 
-    prompt: 'King Tutankhamun in full royal regalia, wearing the gold and blue nemes headcloth and false beard, sitting on a golden throne.', 
+    prompt: 'King Tutankhamun sitting on his golden throne. He looks young, wearing the blue and gold striped Nemes headcloth with the uraeus (cobra and vulture), a false beard, and a broad collar. He wears a white linen kilt. The background is a palace hall with painted pillars. Bright, colorful, historical reconstruction.', 
     icon: '⚱️' 
   },
   { 
     id: 'sitting-bull', 
     name: 'Sitting Bull', 
     description: 'Lakota Leader', 
-    prompt: 'Sitting Bull, dignified Lakota holy man, wearing a buckskin shirt and eagle feather headdress, holding a peace pipe, prairie background.', 
+    prompt: 'Sitting Bull sitting with dignity. He wears a buckskin shirt adorned with quillwork and a single eagle feather in his hair (or a full war bonnet). He holds a peace pipe. His face is lined and serious. The background is a blurred encampment of tipis on the Great Plains. Historical sepia photography style.', 
     icon: '🪶' 
   },
   { 
     id: 'washington', 
     name: 'George Washington', 
     description: '1st US President', 
-    prompt: 'George Washington in a blue Continental Army uniform, standing in a boat crossing the icy Delaware River, determined expression, dawn light.', 
+    prompt: 'George Washington crossing the Delaware River. He stands tall in a rowboat, wearing a blue Continental Army uniform with a tricorne hat and a cloak. He looks determinedly forward. Soldiers row around him amidst chunks of ice. The sky is a pre-dawn grey. Heroic, oil painting style.', 
     icon: '🇺🇸' 
   },
   { 
     id: 'audrey', 
     name: 'Audrey Hepburn', 
     description: 'Film & Fashion Icon', 
-    prompt: 'Audrey Hepburn in a chic black dress, pearl necklace, and oversized sunglasses, holding a cigarette holder, Parisian cafe background.', 
+    prompt: 'Audrey Hepburn as Holly Golightly. She wears a black Givenchy dress, long black gloves, a pearl necklace, and a tiara in her beehive updo. She holds a long cigarette holder. She is standing in front of a Tiffany\'s window display in New York City. Elegant, chic, 1960s film style.', 
     icon: '👗' 
   },
   { 
     id: 'dali', 
     name: 'Salvador Dali', 
     description: 'Surrealist Artist', 
-    prompt: 'Salvador Dalí, eccentric expression with wide eyes and waxed mustache, wearing a velvet jacket, surrounded by melting clocks in a surreal landscape.', 
+    prompt: 'Salvador Dalí staring wide-eyed at the camera. His long, waxed mustache defies gravity. He wears a velvet smoking jacket and holds an anteater on a leash. The background is a surreal desert landscape with melting clocks and stilts. Bizarre, dreamlike, hyper-realistic.', 
     icon: '🕰️' 
   },
   { 
     id: 'bach', 
     name: 'J.S. Bach', 
     description: 'Baroque Composer', 
-    prompt: 'Johann Sebastian Bach, wearing a powdered wig and formal 18th-century coat, playing a pipe organ in a grand cathedral, stained glass light.', 
+    prompt: 'Johann Sebastian Bach playing a pipe organ in a German cathedral. He wears a periwig and a formal 18th-century coat. His hands are on the keys, feet on the pedals. Light streams through stained glass windows, creating colorful patterns on the stone floor. Solemn, majestic atmosphere.', 
     icon: '⛪' 
   },
   { 
     id: 'marco-polo', 
     name: 'Marco Polo', 
     description: 'Explorer', 
-    prompt: 'Marco Polo, dressed in traveler\'s clothes, presenting gifts to the Kublai Khan in a lavish Mongolian court, intricate details.', 
+    prompt: 'Marco Polo at the court of Kublai Khan. He wears a mix of Venetian and Mongol clothing—a tunic and a fur hat. He is presenting a map or spices to the Emperor. The setting is a lavish yurt or palace hall with silk tapestries. Rich colors, adventure illustration style.', 
     icon: '🗺️' 
   },
   { 
     id: 'freddie-mercury', 
     name: 'Freddie Mercury', 
     description: 'Rock Legend', 
-    prompt: 'Freddie Mercury on stage at Live Aid, wearing a white tank top and jeans, arm raised high, holding a microphone stick, massive crowd background.', 
+    prompt: 'Freddie Mercury at Live Aid, 1985. He wears a white tank top, light blue wrangler jeans, a studded belt, and an armband. He holds a microphone stand, fist raised in the air. He has a thick mustache. The background is a massive stadium crowd at Wembley. Iconic, high-energy.', 
     icon: '🎤' 
   },
   { 
     id: 'david-bowie', 
     name: 'David Bowie', 
     description: 'Ziggy Stardust', 
-    prompt: 'David Bowie as Ziggy Stardust, with lightning bolt face paint and flame-orange hair, wearing a futuristic glam rock outfit.', 
+    prompt: 'David Bowie as Ziggy Stardust. He has bright orange mullet hair and a gold astral sphere painted on his forehead. He wears a multi-colored, quilted jumpsuit with large shoulder pads. He holds a red guitar. The background is a starry glam-rock stage set. Androgynous, futuristic, vibrant.', 
     icon: '⚡' 
   },
   { 
     id: 'jimi-hendrix', 
     name: 'Jimi Hendrix', 
     description: 'Guitar God', 
-    prompt: 'Jimi Hendrix playing a white Stratocaster upside down, wearing a military jacket and colorful headband, psychedelic stage lighting.', 
+    prompt: 'Jimi Hendrix playing a white Fender Stratocaster at Woodstock. He wears a fringed white leather jacket, a red headband, and colorful bell-bottoms. He is deep in a guitar solo, eyes closed. The background is a festival stage with psychedelic lights. 1960s rock photography style.', 
     icon: '🎸' 
   },
   { 
     id: 'john-lennon', 
     name: 'John Lennon', 
     description: 'The Dreamer', 
-    prompt: 'John Lennon wearing round glasses and a New York City t-shirt, standing in Central Park, autumn leaves, peaceful vibe.', 
+    prompt: 'John Lennon in his New York City era. He wears his signature round teashade glasses, a "New York City" ringer t-shirt, and a denim jacket. He has shoulder-length hair. He stands on a rooftop with the Manhattan skyline in the background. Gritty, realistic 1970s style.', 
     icon: '☮️' 
   },
   { 
     id: 'coco-chanel', 
     name: 'Coco Chanel', 
     description: 'Fashion Icon', 
-    prompt: 'Coco Chanel in her atelier, wearing a black suit, pearls, and a hat, smoking a cigarette, surrounded by dress forms and fabric.', 
+    prompt: 'Coco Chanel in her apartment at 31 Rue Cambon. She sits on a suede beige sofa. She wears a classic black tweed suit, layers of pearl necklaces, and a black hat. She holds a cigarette. The room is decorated with Coromandel screens and crystal lions. Chic, monochrome, elegant.', 
     icon: '👠' 
   },
   { 
     id: 'walt-disney', 
     name: 'Walt Disney', 
     description: 'Animator', 
-    prompt: 'Walt Disney, smiling warmly, wearing a suit and tie, sketching Mickey Mouse on a drawing board, 1950s office setting.', 
+    prompt: 'Walt Disney in his studio, 1950s. He wears a suit and tie with a mustache. He leans over a drawing board, sketching Mickey Mouse. Behind him are shelves filled with animation cels and maquettes. He has a warm, grandfatherly smile. Nostalgic, warm lighting.', 
     icon: '🐭' 
   },
   { 
     id: 'steve-jobs', 
     name: 'Steve Jobs', 
     description: 'Tech Visionary', 
-    prompt: 'Steve Jobs presenting on stage, wearing a black turtleneck, jeans, and sneakers, holding a sleek device, spotlight on him.', 
+    prompt: 'Steve Jobs on stage at a keynote presentation. He wears his uniform: a black St. Croix turtleneck, Levi\'s 501 jeans, and New Balance sneakers. He wears round rimless glasses. He holds a sleek new iPhone. The background is a dark stage with a large blue screen behind him. Minimalist, modern.', 
     icon: '📱' 
   },
   { 
     id: 'henry-ford', 
     name: 'Henry Ford', 
     description: 'Industrialist', 
-    prompt: 'Henry Ford standing next to a Model T assembly line, holding blueprints, wearing a suit, industrial factory background.', 
+    prompt: 'Henry Ford standing on the factory floor of the Highland Park plant. He wears a dark three-piece suit and a pocket watch. Behind him, the moving assembly line carries Model T chassis. He looks proud and serious. Industrial, black and white photography style.', 
     icon: '🚗' 
   },
   { 
     id: 'thomas-edison', 
     name: 'Thomas Edison', 
     description: 'Inventor', 
-    prompt: 'Thomas Edison in his Menlo Park lab, holding a glowing incandescent light bulb, surrounded by phonographs and wires.', 
+    prompt: 'Thomas Edison in his Menlo Park laboratory. He wears a vest and shirt sleeves, looking tired but triumphant. He holds a glowing incandescent light bulb in front of his face. The room is dark, illuminated only by the bulb and faint gaslight in the background. Dramatic lighting.', 
     icon: '💡' 
   },
   { 
     id: 'ben-franklin', 
     name: 'Benjamin Franklin', 
     description: 'Founding Father', 
-    prompt: 'Benjamin Franklin, with long grey hair and spectacles, wearing a colonial coat, holding a kite in a thunderstorm, electric spark on key.', 
+    prompt: 'Benjamin Franklin in a thunderstorm. He wears a colonial coat, breeches, and spectacles. He holds a silk string attached to a kite flying in the dark clouds. A brass key sparks near his hand. His hair is windblown. Dynamic, illustrative style.', 
     icon: '🪁' 
   },
   { 
     id: 'teddy-roosevelt', 
     name: 'Theodore Roosevelt', 
     description: 'Rough Rider', 
-    prompt: 'Theodore Roosevelt in Rough Rider uniform, glasses, big teeth smile, riding a horse through rugged terrain.', 
+    prompt: 'Theodore Roosevelt leading the Rough Riders. He is mounted on a horse, wearing a khaki uniform, a slouch hat, and pince-nez glasses. He is yelling a charge, teeth bared in a grin. The background is the scrub brush of San Juan Hill. Action-oriented, historical style.', 
     icon: '🏞️' 
   },
   { 
     id: 'jfk', 
     name: 'John F. Kennedy', 
     description: '35th President', 
-    prompt: 'John F. Kennedy sailing a boat, wearing sunglasses and a polo shirt, windblown hair, ocean background, Kennedy style.', 
+    prompt: 'John F. Kennedy sailing off the coast of Hyannis Port. He wears a navy polo shirt, white trousers, and Wayfarer sunglasses. His hair is windblown. He looks relaxed and youthful. The background is the blue ocean and the teak deck of a sailboat. Kodachrome color style.', 
     icon: '🇺🇸' 
   },
   { 
     id: 'houdini', 
     name: 'Harry Houdini', 
     description: 'Escape Artist', 
-    prompt: 'Harry Houdini bound in chains and handcuffs, submerged in a water tank, intense expression of concentration, dramatic stage lighting.', 
+    prompt: 'Harry Houdini in a publicity poster pose. He is shirtless and muscular, bound in heavy chains and padlocks. He looks intensely at the viewer. The background is a vaudeville stage curtain. Vintage magic poster aesthetic.', 
     icon: '🔒' 
   },
   { 
     id: 'jane-austen', 
     name: 'Jane Austen', 
     description: 'Novelist', 
-    prompt: 'Jane Austen, wearing a Regency-era bonnet and high-waisted dress, sitting at a small writing desk in a cottage, holding a quill.', 
+    prompt: 'Jane Austen sitting at a small writing table in a cottage in Chawton. She wears a muslin Regency dress and a mob cap. She holds a quill, pausing in thought. A window looks out onto an English garden. Soft, natural interior light. Watercolor portrait style.', 
     icon: '📖' 
   },
   { 
     id: 'mark-twain', 
     name: 'Mark Twain', 
     description: 'Humorist', 
-    prompt: 'Mark Twain, with bushy white hair and mustache, wearing a white suit, smoking a pipe on a riverboat deck, Mississippi River background.', 
+    prompt: 'Mark Twain standing on the deck of a Mississippi steamboat. He wears his famous white suit and holds a pipe. He has a bushy white mustache and unruly hair. The background shows the river and a paddlewheel. Hazy, humid atmosphere.', 
     icon: '🚤' 
   },
   { 
     id: 'hemingway', 
     name: 'Ernest Hemingway', 
     description: 'Writer', 
-    prompt: 'Ernest Hemingway, rugged and bearded, wearing a fisherman\'s sweater, sitting at a typewriter in a rustic room, bottle of rum on desk.', 
+    prompt: 'Ernest Hemingway in Key West or Cuba. He is a rugged, bearded man wearing a fisherman\'s cap and a guayabera shirt. He sits at a bar with a daiquiri and a cat. He looks weathered and masculine. Tropical, relaxed atmosphere.', 
     icon: '✍️' 
   },
   { 
     id: 'poe', 
     name: 'Edgar Allan Poe', 
     description: 'Gothic Poet', 
-    prompt: 'Edgar Allan Poe, pale and brooding, sitting in a dark study with a raven perched on a bust of Pallas, gothic atmosphere.', 
+    prompt: 'Edgar Allan Poe sitting in a dark, Victorian study. He is pale with dark circles under his eyes, wearing a black suit and cravat. A raven is perched on a bust of Pallas above the door. The lighting is dim and shadowy. Gothic horror aesthetic.', 
     icon: '🦅' 
   },
   { 
     id: 'marie-antoinette', 
     name: 'Marie Antoinette', 
     description: 'Queen of France', 
-    prompt: 'Marie Antoinette in a towering powdered wig with ship model, wearing a lavish silk gown, in the gardens of Versailles, eating cake.', 
+    prompt: 'Marie Antoinette in the gardens of Petit Trianon. She wears a towering powdered wig decorated with feathers and a pastel pink silk Rococo gown with ribbons. She holds a shepherdess crook. The setting is idyllic and pastoral. Soft, painterly style.', 
     icon: '🍰' 
   },
   { 
     id: 'henry-viii', 
     name: 'Henry VIII', 
     description: 'Tudor King', 
-    prompt: 'Henry VIII, large and imposing, wearing fine velvet and fur robes, hands on hips, standing in a Tudor palace hall.', 
+    prompt: 'Henry VIII based on the Holbein portrait. He is a large man standing legs apart, hands on hips. He wears opulent clothes of velvet, fur, and gold thread, with a flat cap. He looks imposing and dangerous. The background is a Tudor tapestry. Renaissance portrait style.', 
     icon: '👑' 
   },
   { 
     id: 'rasputin', 
     name: 'Rasputin', 
     description: 'Russian Mystic', 
-    prompt: 'Grigori Rasputin, with wild eyes and long beard, wearing a black cassock and cross, standing in a snowy Russian courtyard.', 
+    prompt: 'Grigori Rasputin standing in a snowy courtyard in St. Petersburg. He has long, greasy black hair and a beard, with hypnotic eyes. He wears a black peasant tunic and heavy boots. He holds a crucifix. The atmosphere is ominous and cold.', 
     icon: '🔮' 
   },
   { 
     id: 'sun-tzu', 
     name: 'Sun Tzu', 
     description: 'Art of War', 
-    prompt: 'Sun Tzu, ancient Chinese general, wearing armor and holding a bamboo scroll, standing on a hill overlooking an army formation.', 
+    prompt: 'Sun Tzu commanding an army in ancient China. He wears leather armor over robes and a general\'s cap. He holds a bamboo scroll and points with a sword. The background is a misty mountain landscape with soldiers in formation. Epic, historical film style.', 
     icon: '⚔️' 
   },
   { 
     id: 'musashi', 
     name: 'Miyamoto Musashi', 
     description: 'Sword Saint', 
-    prompt: 'Miyamoto Musashi, unkempt hair, wearing a kimono, wielding two wooden swords (bokken) in a duel on a beach at sunset.', 
+    prompt: 'Miyamoto Musashi on the beach at Ganryujima. He has wild hair tied back and wears simple, ragged kimono. He wields a wooden sword (bokken) carved from an oar. He looks calm and deadly. The sun is setting over the ocean. Japanese period drama style.', 
     icon: '🗡️' 
   },
   { 
     id: 'geronimo', 
     name: 'Geronimo', 
     description: 'Apache Leader', 
-    prompt: 'Geronimo, kneeling with a rifle, wearing traditional Apache clothing and headband, rugged desert landscape background.', 
+    prompt: 'Geronimo kneeling in the desert terrain of the Southwest. He holds a rifle. He wears a cloth headband, a loose shirt, and moccasins. His face is weathered and fierce. The background features cacti and rock formations. Historical realism.', 
     icon: '🏹' 
   },
   { 
     id: 'sacagawea', 
     name: 'Sacagawea', 
     description: 'Shoshone Guide', 
-    prompt: 'Sacagawea, wearing buckskin, carrying a baby in a cradleboard on her back, pointing towards mountains, Lewis and Clark in background.', 
+    prompt: 'Sacagawea pointing the way forward. She carries her infant son Jean Baptiste in a cradleboard on her back. She wears a buckskin dress. Lewis and Clark stand behind her. The background is the Rocky Mountains. Adventurous, historical style.', 
     icon: '🏔️' 
   },
   { 
     id: 'blackbeard', 
     name: 'Blackbeard', 
     description: 'Pirate Captain', 
-    prompt: 'Blackbeard the pirate, fuses smoking in his beard, wearing a long coat and hat, wielding a cutlass on a burning ship deck.', 
+    prompt: 'Blackbeard (Edward Teach) on the deck of the Queen Anne\'s Revenge. He has slow-burning fuses tied into his massive black beard, creating smoke around his face. He wears a long coat and multiple pistols across his chest. He wields a cutlass. Dramatic, fearsome pirate aesthetic.', 
     icon: '🏴‍☠️' 
   },
   { 
     id: 'leonidas', 
     name: 'Leonidas', 
     description: 'King of Sparta', 
-    prompt: 'King Leonidas of Sparta, screaming a war cry, wearing a red cloak and bronze helmet, holding a spear and shield, phalanx background.', 
+    prompt: 'King Leonidas at the Hot Gates. He wears a crimson cloak, a bronze Corinthian helmet pushed back, and greaves. He holds a spear and a large round shield (aspis). He is shouting a war cry. Spartan warriors stand in phalanx behind him. Gritty, desaturated action style.', 
     icon: '🛡️' 
   },
   { 
     id: 'hannibal', 
     name: 'Hannibal Barca', 
     description: 'Carthaginian General', 
-    prompt: 'Hannibal Barca, wearing Carthaginian armor, riding a war elephant through the snowy Alps, soldiers marching behind.', 
+    prompt: 'Hannibal crossing the Alps. He is wrapped in furs over his armor, riding a war elephant. Snow swirls around him. His face is determined. Behind him, a line of soldiers and elephants stretches through the mountain pass. Epic historical scale.', 
     icon: '🐘' 
   },
   { 
     id: 'spartacus', 
     name: 'Spartacus', 
     description: 'Gladiator', 
-    prompt: 'Spartacus, muscular and scarred, wearing gladiator armor, fighting in the Colosseum arena, sand flying, crowd roaring.', 
+    prompt: 'Spartacus in the gladiator arena. He is bare-chested, muscular, and scarred, holding a gladius and a small shield. He stands over a defeated foe, looking up at the crowd. The Colosseum stands tall around him. Dust and sunlight filter into the arena. Action movie style.', 
     icon: '🗡️' 
   },
   { 
     id: 'charlemagne', 
     name: 'Charlemagne', 
     description: 'Father of Europe', 
-    prompt: 'Charlemagne, crowned Holy Roman Emperor, wearing a cape and holding a sword (Joyeuse), seated on a throne in a cathedral.', 
+    prompt: 'Charlemagne seated on a throne in Aachen Cathedral. He has a long white beard and wears a golden crown and imperial robes. He holds the sword Joyeuse. The setting is Romanesque architecture with mosaics. Majestic, medieval art style.', 
     icon: '👑' 
   },
   { 
     id: 'saladin', 
     name: 'Saladin', 
     description: 'Sultan of Egypt', 
-    prompt: 'Saladin, noble and wise, wearing Saracen armor and turban, riding a horse in the desert sands, army banners behind.', 
+    prompt: 'Saladin on horseback in the desert. He wears Saracen chainmail, yellow robes, and a turban. He holds a scimitar. He looks noble and chivalrous. The background shows Crusader castles in the distance. Historical epic style.', 
     icon: '☪️' 
   },
   { 
     id: 'mansa-musa', 
     name: 'Mansa Musa', 
     description: 'Wealthiest King', 
-    prompt: 'Mansa Musa, King of Mali, holding a gold nugget, wearing rich golden robes and turban, on a pilgrimage caravan with camels.', 
+    prompt: 'Mansa Musa on his pilgrimage to Mecca. He sits on a golden throne atop a palanquin or camel. He wears robes of gold brocade and a turban. He holds a large gold nugget. The background is a caravan stretching to the horizon in the Sahara desert. Rich, warm colors.', 
     icon: '💰' 
   },
   { 
     id: 'nefertiti', 
     name: 'Queen Nefertiti', 
     description: 'Egyptian Queen', 
-    prompt: 'Queen Nefertiti, realistic profile, wearing the iconic tall blue crown and broad collar necklace, limestone palace background.', 
+    prompt: 'Portrait of Queen Nefertiti based on the famous bust. She wears the tall flat-topped blue crown (cap crown) and a broad floral collar. Her neck is long and elegant. Her skin is flawless. The background is a stylized Egyptian palace with lotus columns. Photorealistic beauty shot.', 
     icon: '🐍' 
   },
   { 
     id: 'michelangelo', 
     name: 'Michelangelo', 
     description: 'Renaissance Artist', 
-    prompt: 'Michelangelo Buonarroti, covered in marble dust, chiseling the statue of David, intense focus, Renaissance studio.', 
+    prompt: 'Michelangelo sculpting the David. He is covered in marble dust, wearing a smock and a head covering. He holds a chisel and mallet, looking intensely at the giant marble hand. The studio is filled with blocks of stone. Renaissance atmosphere.', 
     icon: '🗿' 
   },
   { 
     id: 'rembrandt', 
     name: 'Rembrandt', 
     description: 'Dutch Master', 
-    prompt: 'Rembrandt van Rijn, self-portrait pose, wearing a beret and dark coat, dramatic chiaroscuro lighting, holding a palette.', 
+    prompt: 'Rembrandt self-portrait come to life. He is an older man with a bulbous nose and curly hair, wearing a velvet beret and a dark coat with a gold chain. The lighting is dramatic chiaroscuro, illuminating his face from one side. He holds a palette and brushes. Oil painting style.', 
     icon: '🎨' 
   },
   { 
     id: 'monet', 
     name: 'Claude Monet', 
     description: 'Impressionist', 
-    prompt: 'Claude Monet, older with a white beard, wearing a straw hat, painting water lilies by a pond in Giverny, impressionist feel.', 
+    prompt: 'Claude Monet in his garden at Giverny. He is an old man with a long white beard, wearing a suit and a straw hat. He stands on the Japanese bridge overlooking the water lily pond. He is painting on an easel. The scene is dappled with sunlight and color. Impressionist style.', 
     icon: '🪷' 
   },
   { 
     id: 'klimt', 
     name: 'Gustav Klimt', 
     description: 'Symbolist Painter', 
-    prompt: 'Gustav Klimt, wearing a long blue smock, holding a cat, standing in front of \'The Kiss\' with gold leaf patterns.', 
+    prompt: 'Gustav Klimt in his studio. He wears a floor-length indigo smock and sandals. He holds a cat in his arms. The background is filled with his paintings, featuring gold leaf patterns and geometric shapes. Artistic, decorative style.', 
     icon: '🖼️' 
   },
   { 
     id: 'sinatra', 
     name: 'Frank Sinatra', 
     description: 'The Voice', 
-    prompt: 'Frank Sinatra, crooning into a vintage microphone, wearing a fedora and tuxedo, smoky jazz club atmosphere, spotlight.', 
+    prompt: 'Frank Sinatra singing at the Sands Hotel. He wears a sharp tuxedo, loosened bow tie, and holds a drink and a cigarette. He leans against a microphone stand. A fedora is tipped on his head. The background is a dark, smoky jazz club with a band. Cool, noir atmosphere.', 
     icon: '🎤' 
   },
   { 
     id: 'louis-armstrong', 
     name: 'Louis Armstrong', 
     description: 'Jazz Legend', 
-    prompt: 'Louis Armstrong, cheeks puffed out playing a trumpet, sweating, holding a white handkerchief, joyous expression, jazz club.', 
+    prompt: 'Louis Armstrong playing the trumpet. His cheeks are puffed out, eyes wide with joy, sweat on his brow. He holds a white handkerchief. He wears a suit. The background is a jazz club stage with warm spotlighting. Energetic, close-up.', 
     icon: '🎺' 
   },
   { 
     id: 'plato', 
     name: 'Plato', 
     description: 'Philosopher', 
-    prompt: 'Plato, older philosopher with a white beard, wearing a toga, pointing upward in the School of Athens, classical architecture.', 
+    prompt: 'Plato walking in the Academy. He is an older, bearded man in a toga. He points a finger upwards (referencing the School of Athens). He is engaged in dialogue with students. The setting is a grove of olive trees with classical statues. Classical art style.', 
     icon: '🏛️' 
   },
   { 
     id: 'aristotle', 
     name: 'Aristotle', 
     description: 'Philosopher', 
-    prompt: 'Aristotle, mature philosopher, wearing a toga, holding a book and gesturing forward, walking in the Lyceum gardens.', 
+    prompt: 'Aristotle studying nature. He is a mature man with a beard, wearing a toga. He is examining a plant or animal specimen. He holds a scroll. He points his hand palm down (grounding knowledge). The setting is a Greek garden. Realistic, historical style.', 
     icon: '🦉' 
   },
   { 
     id: 'nietzsche', 
     name: 'Friedrich Nietzsche', 
     description: 'Philosopher', 
-    prompt: 'Friedrich Nietzsche, with a massive bushy mustache, intense stare, walking on a mountain path, moody and philosophical.', 
+    prompt: 'Friedrich Nietzsche portrait. He has a massive, bushy walrus mustache and intense, brooding eyes. He wears a dark suit. The background is a misty mountain path in the Alps (Sils Maria). Melancholic, philosophical atmosphere.', 
     icon: '🧠' 
   },
   { 
     id: 'dickens', 
     name: 'Charles Dickens', 
     description: 'Victorian Author', 
-    prompt: 'Charles Dickens, wearing a Victorian frock coat and bow tie, reading from a book to an audience, gaslight atmosphere.', 
+    prompt: 'Charles Dickens at his desk. He has a goatee and wavy hair, wearing a velvet jacket. He looks tired but manic. He is writing furiously by gaslight. The room is cluttered with papers. Victorian atmosphere.', 
     icon: '📚' 
   },
   { 
     id: 'tolkien', 
     name: 'J.R.R. Tolkien', 
     description: 'Fantasy Author', 
-    prompt: 'J.R.R. Tolkien, smoking a pipe, wearing a tweed jacket, sitting in an armchair with a map of Middle-earth, cozy study.', 
+    prompt: 'J.R.R. Tolkien in his Oxford study. He is an elderly man smoking a pipe, wearing a tweed jacket and vest. He sits in an armchair. Behind him is a map of Middle-earth pinned to the wall. Cozy, academic atmosphere.', 
     icon: '💍' 
   },
   { 
     id: 'mary-shelley', 
     name: 'Mary Shelley', 
     description: 'Sci-Fi Pioneer', 
-    prompt: 'Mary Shelley, young and pale, writing in a notebook by candlelight during a storm, gothic atmosphere.', 
+    prompt: 'Mary Shelley writing Frankenstein. She is a young woman in a Regency dress, sitting in a dark room at Villa Diodati. A storm rages outside the window. She looks frightened but inspired by a flash of lightning. Gothic romantic style.', 
     icon: '🧟' 
   },
   { 
     id: 'turing', 
     name: 'Alan Turing', 
     description: 'Computer Scientist', 
-    prompt: 'Alan Turing, wearing a suit, standing next to the Bombe machine, holding cables, focused expression, Bletchley Park setting.', 
+    prompt: 'Alan Turing at Bletchley Park. He is a young man in a tweed suit, looking awkward and shy. He stands next to the Bombe machine, with its rotating drums. He holds a cup of tea attached to the radiator. Intellectual, historical style.', 
     icon: '⚙️' 
   },
   { 
     id: 'oppenheimer', 
     name: 'J. Robert Oppenheimer', 
     description: 'Physicist', 
-    prompt: 'J. Robert Oppenheimer, wearing a porkpie hat and suit, smoking a cigarette, looking at a nuclear test site, contemplative.', 
+    prompt: 'J. Robert Oppenheimer at the Trinity test site. He wears a porkpie hat and a loose suit, holding a cigarette. He looks gaunt and haunted. In the background, a desert landscape and a tower. Cinematic, noir-ish lighting.', 
     icon: '☢️' 
   },
   { 
     id: 'gagarin', 
     name: 'Yuri Gagarin', 
     description: 'First in Space', 
-    prompt: 'Yuri Gagarin, wearing an orange Vostok spacesuit and white helmet, smiling broadly, inside the spacecraft capsule.', 
+    prompt: 'Yuri Gagarin in the Vostok 1 capsule. He wears an orange SK-1 pressure suit and a white helmet with "CCCP" written on it. He is smiling a bright, charming smile. Through the porthole, the Earth is visible. Retro-futurist Soviet aesthetic.', 
     icon: '🚀' 
   },
   { 
     id: 'cousteau', 
     name: 'Jacques Cousteau', 
     description: 'Oceanographer', 
-    prompt: 'Jacques Cousteau, wearing a red beanie and wetsuit, on the deck of the Calypso, blue ocean background.', 
+    prompt: 'Jacques Cousteau on the deck of the Calypso. He is a thin man with a prominent nose, wearing his signature red beanie cap and a blue wetsuit or shirt. He holds a pipe. The blue ocean is behind him. Adventurous, documentary style.', 
     icon: '🌊' 
   },
   { 
     id: 'grace-kelly', 
     name: 'Grace Kelly', 
     description: 'Princess of Monaco', 
-    prompt: 'Grace Kelly, wearing a white lace wedding dress and veil, elegant and poised, royal palace background.', 
+    prompt: 'Grace Kelly in a convertible driving along the French Riviera. She wears a silk headscarf and sunglasses, and a chic 1950s outfit. She looks elegant and poised. The Mediterranean Sea is in the background. Glamorous, technicolor film style.', 
     icon: '💎' 
   },
   { 
     id: 'james-dean', 
     name: 'James Dean', 
     description: 'Rebel', 
-    prompt: 'James Dean, wearing a red windbreaker and white t-shirt, leaning against a Porsche 550 Spyder, cool rebellious look.', 
+    prompt: 'James Dean leaning against a wall. He wears a red Harrington jacket, white t-shirt, and jeans. He has a cigarette in his mouth and is squinting coolly. The background is a blurry 1950s street. Iconic rebel aesthetic.', 
     icon: '🚬' 
   },
   { 
     id: 'al-capone', 
     name: 'Al Capone', 
     description: 'Gangster', 
-    prompt: 'Al Capone, wearing a fedora and pinstripe suit, smoking a cigar, sitting in a leather chair, prohibition era vibe.', 
+    prompt: 'Al Capone in a Chicago speakeasy. He is a heavy-set man with facial scars, wearing a pinstripe suit, fedora, and diamond ring. He smokes a cigar. He smiles menacingly. The background is dark and luxurious. Prohibition era style.', 
     icon: '🔫' 
   },
   { 
     id: 'billy-the-kid', 
     name: 'Billy the Kid', 
     description: 'Outlaw', 
-    prompt: 'Billy the Kid, wearing a battered top hat and vest, holding a Winchester rifle, leaning on a fence, tintype style.', 
+    prompt: 'Billy the Kid posing for a tintype. He stands casually, leaning on a Winchester rifle. He wears a battered hat, a vest, and a bandana. He has a goofy, buck-toothed grin. The background is a painted canvas of a frontier scene. Sepia, rustic style.', 
     icon: '🌵' 
   },
   { 
     id: 'annie-oakley', 
     name: 'Annie Oakley', 
     description: 'Sharpshooter', 
-    prompt: 'Annie Oakley, wearing a western skirt and hat, aiming a rifle backwards over her shoulder using a mirror, circus tent background.', 
+    prompt: 'Annie Oakley performing in Buffalo Bill\'s Wild West Show. She wears a fringed skirt and jacket with medals, and a cowboy hat. She is shooting a target over her shoulder using a mirror. The background is a circus tent. Western poster style.', 
     icon: '🎯' 
   },
   { 
     id: 'davy-crockett', 
     name: 'Davy Crockett', 
     description: 'Frontiersman', 
-    prompt: 'Davy Crockett, wearing a coonskin cap and fringed buckskin jacket, holding a flintlock rifle, standing in the Alamo.', 
+    prompt: 'Davy Crockett at the Alamo. He wears a coonskin cap and buckskin fringes. He holds "Old Betsy," his rifle. He looks weary but resolute. The background shows the adobe walls of the mission. Historical painting style.', 
     icon: '🐻' 
   },
   { 
     id: 'babe-ruth', 
     name: 'Babe Ruth', 
     description: 'Baseball Legend', 
-    prompt: 'Babe Ruth, wearing a baggy pinstripe Yankees uniform, pointing his bat to the center field bleachers, baseball stadium.', 
+    prompt: 'Babe Ruth calling his shot. He wears a baggy grey Yankees uniform and cap. He points with his bat towards the center field fences. He has a round face and a potbelly. The background is a crowded baseball stadium in the 1930s. Vintage sports photo style.', 
     icon: '⚾' 
   },
   { 
     id: 'dante', 
     name: 'Dante Alighieri', 
     description: 'The Supreme Poet', 
-    prompt: 'Dante Alighieri, wearing a red hood and laurel wreath, holding a book, looking at a vision of the Inferno, dramatic lighting.', 
+    prompt: 'Dante Alighieri profile portrait. He has a hooked nose and sharp chin. He wears a red hood and robe with a laurel wreath. He holds a copy of the Divine Comedy. The background depicts the circles of Hell. Medieval fresco style.', 
     icon: '🔥' 
   },
   { 
     id: 'hypatia', 
     name: 'Hypatia', 
     description: 'Mathematician', 
-    prompt: 'Hypatia of Alexandria, wearing scholarly robes, teaching mathematics with a stylus and papyrus in the Great Library, soft sunlight filtering through scrolls.', 
+    prompt: 'Hypatia teaching in the Library of Alexandria. She is a beautiful woman wearing philosopher\'s robes. She points to a geometric diagram on a scroll. She is surrounded by scrolls and astrolabes. The lighting is soft and intellectual. Classical style.', 
     icon: '📜' 
   },
   { 
     id: 'avicenna', 
     name: 'Ibn Sina', 
     description: 'Polymath', 
-    prompt: 'Ibn Sina (Avicenna), wearing a turban and scholar\'s robe, writing in a leather-bound medical book, surrounded by glass vessels and herbs.', 
+    prompt: 'Ibn Sina (Avicenna) in a Persian courtyard. He wears a turban and robes. He is writing in a book (The Canon of Medicine). He is surrounded by herbs and glass vessels. The architecture features blue tiles and arches. Golden age of Islam aesthetic.', 
     icon: '🌿' 
   },
   { 
     id: 'hatshepsut', 
     name: 'Hatshepsut', 
     description: 'Pharaoh', 
-    prompt: 'Pharaoh Hatshepsut, wearing the false beard and double crown, standing before her mortuary temple at Deir el-Bahari, golden sunlight.', 
+    prompt: 'Pharaoh Hatshepsut standing on the terrace of her temple at Deir el-Bahari. She is dressed as a male pharaoh with a false beard and kilt, but with feminine features. She holds an ankh. The background is the limestone cliffs and colonnades. Bright Egyptian sunlight.', 
     icon: '🏺' 
   },
   { 
     id: 'rumi', 
     name: 'Rumi', 
     description: 'Sufi Mystic', 
-    prompt: 'Rumi, wearing a whirling dervish robe and tall felt hat, spinning in a state of spiritual ecstasy, soft motion blur, golden light.', 
+    prompt: 'Rumi spinning in a dervish dance. He wears a white robe with a wide skirt that flares out, and a tall felt hat. His arms are crossed or raised. His expression is ecstatic and peaceful. The background is a blur of motion and golden light. Spiritual, mystical style.', 
     icon: '🌀' 
   },
   { 
     id: 'hokusai', 
     name: 'Katsushika Hokusai', 
     description: 'Ukiyo-e Artist', 
-    prompt: 'Katsushika Hokusai, elderly and focused, painting \'The Great Wave\' with a brush on rice paper, Mt. Fuji visible through the window.', 
+    prompt: 'Katsushika Hokusai as an old man in his workshop. He wears simple Japanese worker clothes. He is painting a wave with a brush on paper. Mount Fuji is visible through the window. The style mimics woodblock prints with bold lines and flat colors.', 
     icon: '🌊' 
   },
   { 
     id: 'copernicus', 
     name: 'Nicolaus Copernicus', 
     description: 'Astronomer', 
-    prompt: 'Nicolaus Copernicus, holding a model of the solar system with the sun at the center, looking up at the night sky, Renaissance study.', 
+    prompt: 'Nicolaus Copernicus on a rooftop in Poland. He holds a model of the solar system (heliocentric). He wears a fur-lined robe and a cap. He looks up at the stars. It is night. Renaissance science aesthetic.', 
     icon: '☀️' 
   },
   { 
     id: 'bolivar', 
     name: 'Simón Bolívar', 
     description: 'The Liberator', 
-    prompt: 'Simón Bolívar, \'The Liberator\', in military uniform on a rearing white horse, sword drawn, Andes mountains in background.', 
+    prompt: 'Simón Bolívar on a rearing white horse. He wears a splendid military uniform with gold epaulettes and a bicorne hat. He wields a sword. The background is the dramatic peaks of the Andes mountains. Heroic, revolutionary style.', 
     icon: '🏔️' 
   },
   { 
     id: 'sappho', 
     name: 'Sappho', 
     description: 'Lyric Poet', 
-    prompt: 'Sappho, playing a lyre and singing on the cliffs of Lesbos, wearing a flowing chiton, Aegean sea in the background.', 
+    prompt: 'Sappho reciting poetry on the cliffs of Lesbos. She wears a chiton and holds a lyre. She has violets woven in her hair. The Aegean Sea is blue behind her. The mood is romantic and lyrical. Classical Greek art style.', 
     icon: '🎶' 
   },
   { 
     id: 'wilde', 
     name: 'Oscar Wilde', 
     description: 'Playwright', 
-    prompt: 'Oscar Wilde, flamboyant and witty, wearing a velvet coat with a green carnation, holding a cane, Victorian parlor setting.', 
+    prompt: 'Oscar Wilde lounging on a velvet sofa. He wears a velvet smoking jacket, knee breeches, and silk stockings. He holds a lily or a sunflower. His expression is languid and witty. The room is decorated in the Aesthetic style with peacock feathers. Victorian dandy aesthetic.', 
     icon: '🌹' 
   },
   { 
     id: 'freud', 
     name: 'Sigmund Freud', 
     description: 'Psychoanalyst', 
-    prompt: 'Sigmund Freud, sitting in a leather armchair with a notebook, holding a cigar, Persian rug on the couch, dim study.', 
+    prompt: 'Sigmund Freud in his consulting room in Vienna. He has a white beard and glasses, holding a cigar. He sits in a chair next to the famous couch covered in Persian rugs. The room is filled with antiquities. Psychological, intense atmosphere.', 
     icon: '🛋️' 
   },
   { 
     id: 'woolf', 
     name: 'Virginia Woolf', 
     description: 'Modernist Writer', 
-    prompt: 'Virginia Woolf, contemplative expression, wearing a 1920s dress, writing at a desk with a view of the lighthouse, soft focus.', 
+    prompt: 'Virginia Woolf portrait profile. She has a long face, heavy-lidded eyes, and a bun. She wears a cardigan. She looks melancholic and intellectual. The background is a soft focus garden (Bloomsbury). Ethereal, soft photography style.', 
     icon: '🖊️' 
   },
   { 
     id: 'owens', 
     name: 'Jesse Owens', 
     description: 'Olympic Athlete', 
-    prompt: 'Jesse Owens, sprinting on the track at the 1936 Berlin Olympics, wearing a white singlet, muscles tense, crowd blurring.', 
+    prompt: 'Jesse Owens at the 1936 Berlin Olympics. He is sprinting on the cinder track, wearing a white singlet with "USA" and spikes. His form is perfect. The background shows the stadium and Nazi flags (blurred). Action sports photography.', 
     icon: '🏃' 
   },
   { 
     id: 'liliuokalani', 
     name: 'Queen Liliuokalani', 
     description: 'Queen of Hawaii', 
-    prompt: 'Queen Liliuokalani, wearing a black Victorian gown and royal sash, sitting with a ukulele, composing music, tropical flowers.', 
+    prompt: 'Queen Liliuokalani sitting in Iolani Palace. She wears a black Victorian gown with a royal sash and orders. She holds a fan. She looks dignified but sad. The background features koa wood furniture and tropical flowers. Royal portrait style.', 
     icon: '🌺' 
   },
   { 
     id: 'tecumseh', 
     name: 'Tecumseh', 
     description: 'Shawnee Leader', 
-    prompt: 'Tecumseh, Shawnee leader, wearing traditional buckskin and silver gorget, speaking passionately to a council fire, forest setting.', 
+    prompt: 'Tecumseh addressing a council. He wears traditional Shawnee buckskin, a silver nose ring, and a turban with feathers. He is charismatic and commanding. The background is a forest clearing with other warriors. Historical painting style.', 
     icon: '🔥' 
   },
   { 
     id: 'boudica', 
     name: 'Boudica', 
     description: 'Celtic Queen', 
-    prompt: 'Queen Boudica, fierce and screaming, driving a war chariot with scythed wheels, red hair flying, Celtic warriors behind.', 
+    prompt: 'Queen Boudica driving a war chariot. She has a mass of tawny hair falling to her waist. She wears a tartan cloak and gold torque. She brandishes a spear. The chariot has scythes on the wheels. Roman legions flee in the background. Fierce, action-packed.', 
     icon: '⚔️' 
   },
   { 
     id: 'shaka', 
     name: 'Shaka Zulu', 
     description: 'Zulu King', 
-    prompt: 'Shaka Zulu, muscular and imposing, holding an assegai spear and large cowhide shield, standing on the African savanna.', 
+    prompt: 'Shaka Zulu standing on the African savanna. He is tall and muscular, wearing leopard skin and feathers. He holds a large cowhide shield and the short stabbing spear (iklwa). The background shows a kraal and Zulu warriors. Majestic, historical.', 
     icon: '🛡️' 
   },
   { 
     id: 'eleanor', 
     name: 'Eleanor Roosevelt', 
     description: 'First Lady', 
-    prompt: 'Eleanor Roosevelt, smiling warmly, wearing a floral dress and pearls, speaking into a radio microphone, 1940s office.', 
+    prompt: 'Eleanor Roosevelt visiting a coal mine or a depression-era work site. She wears a coat, hat, and sensible shoes. She is smiling and talking to workers. Her tall stature and teeth are prominent. Black and white documentary photo style.', 
     icon: '📻' 
   },
   { 
     id: 'warhol', 
     name: 'Andy Warhol', 
     description: 'Pop Artist', 
-    prompt: 'Andy Warhol, wearing a black turtleneck and platinum wig, holding a screen print squeegee, surrounded by pop art soup cans.', 
+    prompt: 'Andy Warhol in The Factory. He wears a black turtleneck, black sunglasses, and a fright wig. He holds a screen print or a polaroid camera. The walls are covered in silver foil. The background features pop art prints of Marilyn or soup cans. Cool, detached 60s style.', 
     icon: '🍌' 
   },
   { 
     id: 'christie', 
     name: 'Agatha Christie', 
     description: 'Mystery Writer', 
-    prompt: 'Agatha Christie, sitting in a wicker chair in a garden, holding a tea cup and a notebook, plotting a mystery, English countryside.', 
+    prompt: 'Agatha Christie as an older woman, sitting in a wicker chair in an English garden. She wears a tweed suit and a hat. She holds a teacup. She looks like a harmless grandmother but with a glint in her eye. Cozy mystery aesthetic.', 
     icon: '☕' 
   },
   { 
     id: 'nelson', 
     name: 'Horatio Nelson', 
     description: 'Naval Hero', 
-    prompt: 'Horatio Nelson, wearing a naval uniform with medals, empty sleeve pinned, standing on the deck of HMS Victory, telescope in hand.', 
+    prompt: 'Admiral Horatio Nelson on the quarterdeck of HMS Victory. He wears a naval uniform with many medals and an empty sleeve pinned to his chest. He wears a bicorne hat with a diamond chelengk. He looks through a telescope. Battle smoke in the background. Heroic naval art.', 
     icon: '⚓' 
   },
   { 
     id: 'vlad', 
     name: 'Vlad the Impaler', 
     description: 'Wallachian Prince', 
-    prompt: 'Vlad the Impaler, stern and intimidating, wearing a velvet hat and fur-trimmed coat, holding a goblet, gloomy castle background.', 
+    prompt: 'Vlad the Impaler dining. He wears a velvet hat with a jewel and a fur-trimmed coat. He has a thick mustache and bulging eyes. He holds a goblet. The background is dark and suggestive of his cruelty (forest of stakes in distance). Ominous historical portrait.', 
     icon: '🏰' 
   },
   { 
     id: 'bessie', 
     name: 'Bessie Coleman', 
     description: 'Aviatrix', 
-    prompt: 'Bessie Coleman, wearing leather aviator helmet and goggles, standing proudly on the wing of a biplane, blue sky.', 
+    prompt: 'Bessie Coleman standing on the wing of a biplane. She wears a leather aviator\'s helmet, goggles, and a long leather coat. She is smiling confidently. The plane is a Curtiss JN-4 "Jenny". The sky is blue with fluffy clouds. adventurous, historical.', 
     icon: '✈️' 
   },
   { 
     id: 'douglass', 
     name: 'Frederick Douglass', 
     description: 'Abolitionist', 
-    prompt: 'Frederick Douglass, distinguished and intense, with a full beard and grey hair, wearing a suit, delivering an abolitionist speech.', 
+    prompt: 'Frederick Douglass portrait. He is an older man with a massive mane of white hair and a beard. He wears a formal suit and vest. His expression is fierce, dignified, and intense. He is looking into the camera. High contrast black and white photography.', 
     icon: '🗣️' 
   },
   { 
     id: 'catherine-medici', 
     name: 'Catherine de\' Medici', 
     description: 'Queen of France', 
-    prompt: 'Catherine de\' Medici, wearing a black mourning gown and a French hood, holding a poison ring, standing in a Renaissance corridor.', 
+    prompt: 'Catherine de\' Medici in mourning black. She wears a cap with a widow\'s peak and a high collar. She holds a pomander or poison ring. Her expression is calculating. The background is a dark corridor of the Louvre. Renaissance intrigue style.', 
     icon: '🍷' 
   },
   { 
     id: 'louis-xiv', 
     name: 'Louis XIV', 
     description: 'The Sun King', 
-    prompt: 'King Louis XIV, the Sun King, wearing a massive wig, high heels, and ermine robes, standing in the Hall of Mirrors at Versailles.', 
+    prompt: 'King Louis XIV posing in the Hall of Mirrors. He wears a massive curly wig, high heels with red soles, and ermine-lined robes covered in fleur-de-lis. He shows off his legs in tights. The background is mirrors and chandeliers. Baroque opulence.', 
     icon: '🌞' 
   }
 ];
@@ -925,329 +925,329 @@ export const ERAS: Era[] = [
     id: 'victorian-london',
     name: 'Victorian London',
     description: 'Steam, fog, and top hats.',
-    prompt: 'Cinematic shot, Victorian London, 1890. The subject is wearing a tailored Victorian suit with a top hat or an elegant bustle dress with lace gloves. Background: A cobblestone street shrouded in thick fog, illuminated by the warm glow of gas streetlamps, the silhouette of Big Ben in the distance, moody atmospheric lighting, mysterious ambiance, 8k resolution, detailed texture.',
+    prompt: 'Cinematic shot, Victorian London, 1890. The subject is an English gentleman or lady, dressed in authentic period attire: a charcoal wool frock coat, a silk top hat, and a pocket watch chain, or a bustle dress with lace gloves and a bonnet. Background: A cobblestone street shrouded in thick, swirling fog (pea-souper), illuminated by the warm, flickering yellow glow of gas streetlamps. The silhouette of Big Ben and the Houses of Parliament looms in the distance. Moody atmospheric lighting, wet pavement reflecting the lights, mysterious ambiance, 8k resolution, highly detailed textures.',
     icon: '🎩',
   },
   {
     id: 'roaring-20s',
     name: 'Roaring 20s',
     description: 'Jazz, glitz, and glamour.',
-    prompt: 'Cinematic shot, New York City, 1925. The subject is dressed in lavish Great Gatsby style fashion—a tuxedo with a bowtie or a sparkling flapper dress with a feather headband. Background: An opulent Art Deco ballroom filled with golden confetti, champagne towers, crystal chandeliers, vibrant party atmosphere, sharp focus, high contrast, cinematic lighting.',
+    prompt: 'Cinematic shot, New York City, 1925. The subject is the epitome of Jazz Age glamour, dressed in a sparkling sequined flapper dress with fringe and a feathered headband, or a sharp black tuxedo with a bow tie. Background: An opulent Art Deco ballroom filled with golden confetti raining down, crystal chandeliers dripping with light, and a vibrant party atmosphere. Champagne towers, geometric gold patterns, high contrast, cinematic lighting, sharp focus, capturing the energy of the era.',
     icon: '🎷',
   },
   {
     id: 'cyberpunk-2099',
     name: 'Cyberpunk 2099',
     description: 'Neon lights and chrome.',
-    prompt: 'Cinematic shot, Neo-Tokyo, 2099. The subject has subtle cybernetic implants and is wearing high-tech tactical streetwear with glowing LED accents. Background: A rainy futuristic alleyway drenched in pink and blue neon lights, flying cars zooming overhead, holographic advertisements reflecting in puddles, gritty sci-fi aesthetic, ray tracing, 8k resolution.',
+    prompt: 'Cinematic shot, Neo-Tokyo, 2099. The subject is a futuristic cyberpunk edgerunner, featuring subtle cybernetic implants, glowing circuitry on skin, and high-tech tactical streetwear with LED accents. Background: A rainy, grimy alleyway drenched in neon pink and cyan light, towering skyscrapers with holographic advertisements reflecting in rain puddles, flying cars zooming overhead with light trails. Gritty sci-fi aesthetic, ray tracing, 8k resolution, wet surfaces, atmospheric smoke.',
     icon: '🤖',
   },
   {
     id: 'medieval-fantasy',
     name: 'Medieval Fantasy',
     description: 'Knights, dragons, and magic.',
-    prompt: 'Cinematic shot, High Fantasy Realm. The subject is an epic hero clad in detailed silver plate armor with a fur cloak or flowing mage robes holding a glowing staff. Background: A majestic stone castle perched on a cliff, a dragon soaring in the distance, dramatic overcast sky, magical atmosphere, detailed textures, volumetric lighting.',
+    prompt: 'Cinematic shot, High Fantasy Realm. The subject is an epic hero, clad in intricate, battle-worn silver plate armor engraved with runes, wearing a fur-lined cloak and holding a glowing magical staff or sword. Background: A majestic stone castle perched precariously on a jagged cliffside, a dragon soaring through storm clouds in the distance, dramatic overcast sky with shafts of light. Magical atmosphere, volumetric lighting, detailed metal and fabric textures, Lord of the Rings aesthetic.',
     icon: '⚔️',
   },
   {
     id: 'wild-west',
     name: 'Wild West',
     description: 'Cowboys and dusty saloons.',
-    prompt: 'Cinematic shot, American Frontier, 1870. The subject is a rugged gunslinger wearing a worn leather duster, cowboy hat, bandana, and revolvers at their hip. Background: A dusty wooden boardwalk outside a saloon in a frontier town, tumbleweeds, warm afternoon sun casting long shadows, western film aesthetic, 8k resolution.',
+    prompt: 'Cinematic shot, American Frontier, 1870. The subject is a rugged gunslinger or outlaw, wearing a weathered leather duster coat, a worn cowboy hat, a bandana around the neck, and a gun belt with revolvers. Background: A dusty wooden boardwalk outside a saloon in a frontier town, tumbleweeds rolling by, wooden facades, hitching posts. Warm, harsh afternoon sun casting long, dramatic shadows. Western film aesthetic, sepia undertones, 8k resolution, gritty texture.',
     icon: '🤠',
   },
   {
     id: 'feudal-japan',
     name: 'Feudal Japan',
     description: 'Samurai, cherry blossoms, and honor.',
-    prompt: 'Cinematic shot, Kyoto, 1600. The subject is a samurai in intricate lacquered armor with a katana or wearing a silk kimono with floral patterns. Background: A serene Zen garden with falling pink cherry blossom petals, a traditional pagoda architecture, soft diffused lighting, peaceful and elegant, photorealistic.',
+    prompt: 'Cinematic shot, Kyoto, 1600. The subject is a noble samurai warrior wearing intricate lacquered o-yoroi armor with gold detailing and a katana at the waist, or a figure in a fine silk kimono with embroidered floral patterns. Background: A serene Zen garden with a red torii gate, stone lanterns, and pink cherry blossom petals falling gently in the breeze. Traditional pagoda architecture in the background. Soft, diffused lighting, peaceful and elegant atmosphere, photorealistic, depth of field.',
     icon: '🏯',
   },
   {
     id: 'neon-80s',
     name: 'Neon 80s',
     description: 'Synthwave, arcades, and big hair.',
-    prompt: 'Cinematic shot, 1985 Arcade. The subject is wearing a denim jacket with patches, neon-colored accessories, and voluminous hair. Background: A retro arcade filled with glowing CRT cabinets, neon signs, checkerboard floor, vaporwave color palette (magenta, cyan, purple), nostalgic vibe, high contrast.',
+    prompt: 'Cinematic shot, 1985 Arcade. The subject is an 80s icon, wearing a stonewashed denim jacket with patches, neon-colored accessories, fingerless gloves, and voluminous hair. Background: A retro arcade interior filled with glowing CRT cabinets, neon signs (PAC-MAN, GALAGA), a checkerboard floor, and a haze of smoke. Vaporwave color palette (magenta, cyan, purple), nostalgic synthwave vibe, high contrast, bloom effects.',
     icon: '🕹️',
   },
   {
     id: 'pirate-age',
     name: 'Pirate High Seas',
     description: 'Ships, treasure, and open seas.',
-    prompt: 'Cinematic shot, Caribbean Sea, 1715. The subject is a pirate captain wearing a weathered tricorn hat, frock coat, and leather baldric. Background: The wooden deck of a galleon ship, rigging and sails billowing, turquoise ocean water, a tropical island on the horizon, bright sunlight, adventure style, highly detailed.',
+    prompt: 'Cinematic shot, Caribbean Sea, 1715. The subject is a swashbuckling pirate captain, wearing a weathered tricorn hat, a velvet frock coat, a leather baldric with a flintlock pistol, and loose linen shirt. Background: The wooden deck of a massive galleon ship, rigging and sails billowing in the wind, turquoise ocean water crashing against the hull, a tropical island on the horizon. Bright sunlight, salty atmosphere, adventure style, highly detailed wood and water textures.',
     icon: '🏴‍☠️',
   },
   {
     id: 'viking-saga',
     name: 'Viking Saga',
     description: 'Furs, axes, and longships.',
-    prompt: 'Cinematic shot, Norway, 800 AD. The subject is a Viking warrior wrapped in thick furs and chainmail, holding a battle axe or shield, with war paint. Background: A misty fjord with steep mountains, a Viking longship docked on the rocky shore, cold blue tones, dramatic and raw atmosphere, photorealistic.',
+    prompt: 'Cinematic shot, Norway, 800 AD. The subject is a fierce Viking warrior, wrapped in thick wolf furs and chainmail, holding a battle axe or round shield, with war paint on their face. Background: A misty fjord with steep, snow-capped mountains rising from the dark water, a Viking longship with a dragon prow docked on the rocky shore. Cold, desaturated blue tones, dramatic and raw atmosphere, photorealistic, fog and mist effects.',
     icon: '🪓',
   },
   {
     id: 'renaissance-italy',
     name: 'Renaissance Italy',
     description: 'Art, velvet, and masquerades.',
-    prompt: 'Cinematic shot, Venice, 1500. The subject is dressed in luxurious velvet Renaissance robes with gold embroidery and is holding an ornate masquerade mask. Background: A bridge over a Venetian canal at twilight, gondolas passing by, historic architecture, soft lantern light, romantic and mysterious, 8k resolution.',
+    prompt: 'Cinematic shot, Venice, 1500. The subject is a Venetian noble, dressed in luxurious velvet Renaissance robes with gold embroidery, a lace ruff, and holding an ornate, feathered masquerade mask. Background: A stone bridge over a Venetian canal at twilight, gondolas gliding by, historic palazzo architecture with arched windows, soft lantern light reflecting on the water. Romantic, mysterious, opulent, 8k resolution, rich colors.',
     icon: '🎭',
   },
   {
     id: 'space-age-60s',
     name: 'Space Age 1960s',
     description: 'Retro-futurism and moon landings.',
-    prompt: 'Cinematic shot, 1960s Retro-Future. The subject is wearing a sleek silver space suit with a bubble helmet and go-go boots. Background: A stylized lunar landscape with a massive Earth in the sky, retro sci-fi rocket ship, pulp fiction art style, bold colors, vintage film grain, technicolor.',
+    prompt: 'Cinematic shot, 1960s Retro-Future. The subject is an astronaut or space traveler, wearing a sleek, shiny silver space suit with a bubble helmet, white gloves, and go-go boots. Background: A stylized lunar landscape with a massive, detailed Earth rising in the black starry sky, a retro sci-fi rocket ship with fins nearby. Pulp fiction art style, bold primary colors, vintage film grain, technicolor, adventurous and optimistic.',
     icon: '🚀',
   },
   {
     id: 'post-apocalyptic',
     name: 'Wasteland 2050',
     description: 'Survival gear and desert ruins.',
-    prompt: 'Cinematic shot, Wasteland, 2050. The subject is a survivor wearing distressed tactical gear, goggles, and a scarf, covered in dust. Background: A ruined city skyline reclaimed by desert sand, rusted metal structures, harsh sunlight, Mad Max aesthetic, gritty and realistic, highly detailed.',
+    prompt: 'Cinematic shot, Wasteland, 2050. The subject is a rugged survivor, wearing distressed tactical gear, improvised armor made of tires and scrap metal, goggles, and a scarf to protect against dust. Background: A ruined city skyline reclaimed by vast desert sand dunes, rusted metal structures, harsh, blinding sunlight. Mad Max aesthetic, gritty, realistic, high contrast, heat haze effect, highly detailed textures of rust and sand.',
     icon: '☢️',
   },
   {
     id: 'film-noir',
     name: 'Film Noir 1940s',
     description: 'Shadows, detectives, and mystery.',
-    prompt: 'Cinematic shot, 1940s Film Noir. The subject is a private investigator in a trench coat and fedora, smoking a cigarette. Background: A dark city street at night, rain slicked pavement reflecting streetlights, high contrast black and white photography, dramatic shadows, venetian blind lighting effects.',
+    prompt: 'Cinematic shot, 1940s Film Noir. The subject is a private investigator or femme fatale, wearing a trench coat and fedora, or an elegant evening gown, smoking a cigarette. Background: A dark, rainy city street at night, wet pavement reflecting streetlights, shadows cast by venetian blinds. High contrast black and white photography, dramatic chiaroscuro lighting, mysterious and moody atmosphere, film grain.',
     icon: '🕵️',
   },
   {
     id: 'disco-fever',
     name: 'Disco Fever',
     description: 'Groovy moves and disco balls.',
-    prompt: 'Cinematic shot, 1977 Disco Club. The subject is wearing a white bell-bottom suit or a sequined jumpsuit, striking a dance pose. Background: A multi-colored illuminated dance floor, a giant sparkling disco ball overhead, hazy atmosphere, studio 54 vibe, vibrant and energetic, soft focus.',
+    prompt: 'Cinematic shot, 1977 Disco Club. The subject is the king or queen of the dance floor, wearing a white polyester bell-bottom suit or a shimmering sequined jumpsuit, striking a dynamic dance pose. Background: A multi-colored illuminated dance floor, a giant sparkling disco ball overhead casting light spots everywhere, hazy atmosphere, crowded club. Studio 54 vibe, vibrant, energetic, soft focus, flares.',
     icon: '💃',
   },
   {
     id: 'prehistoric',
     name: 'Prehistoric Wild',
     description: 'Cave furs and dinosaurs.',
-    prompt: 'Cinematic shot, Late Cretaceous. The subject is a primitive hunter wearing rough animal pelts and holding a wooden spear. Background: A lush, dense prehistoric jungle with giant ferns, a Triceratops or T-Rex visible in the clearing, volumetric lighting, epic scale, 8k resolution.',
+    prompt: 'Cinematic shot, Late Cretaceous. The subject is a primitive hunter-gatherer, wearing rough animal pelts and holding a primitive wooden spear with a stone tip. Background: A lush, dense prehistoric jungle with giant ferns and cycads, a massive Triceratops or T-Rex visible in a clearing in the distance. Volumetric lighting filtering through the canopy, epic scale, 8k resolution, realistic textures.',
     icon: '🦕',
   },
   {
     id: 'roman-empire',
     name: 'Roman Empire',
     description: 'Togas, gladiator armor, and marble.',
-    prompt: 'Cinematic shot, Ancient Rome, 100 AD. The subject is a Roman Senator in a white toga with a purple sash or a Gladiator in bronze armor. Background: The interior of the Colosseum or the Roman Forum, marble columns, cheering crowds, bright Mediterranean sunlight, grandeur and history, photorealistic.',
+    prompt: 'Cinematic shot, Ancient Rome, 100 AD. The subject is a Roman Senator in a white toga with a purple border, or a Gladiator in bronze muscle cuirass and helmet. Background: The interior of the Colosseum or the Roman Forum with pristine white marble columns and statues, cheering crowds in the distance. Bright Mediterranean sunlight, clear blue sky, grandeur and history, photorealistic, architectural detail.',
     icon: '🏛️',
   },
   {
     id: 'ww2',
     name: 'World War II',
     description: '1940s Wartime Era.',
-    prompt: 'Cinematic shot, Europe, 1944. The subject is dressed in a period-accurate military uniform or 1940s civilian resistance clothing. Background: A war-torn European village street or an airfield with a Spitfire plane, desaturated color palette, gritty realism, emotional depth, cinematic lighting.',
+    prompt: 'Cinematic shot, Europe, 1944. The subject is a soldier or resistance fighter, dressed in a period-accurate military uniform (khaki or olive drab) or 1940s civilian clothing with a beret. Background: A war-torn European village street with rubble and damaged buildings, or an airfield with a Spitfire plane. Desaturated color palette, gritty realism, emotional depth, cinematic lighting, historical accuracy.',
     icon: '🎖️',
   },
   {
     id: 'ancient-greece',
     name: 'Ancient Greece',
     description: 'Philosophers and marble temples.',
-    prompt: 'Cinematic shot, Athens, 400 BC. The subject is wearing a draped Greek chiton and leather sandals, wearing an olive wreath. Background: The Parthenon on the Acropolis, white marble statues, bright blue sky, deep depth of field, classical beauty, photorealistic, 8k.',
+    prompt: 'Cinematic shot, Athens, 400 BC. The subject is a philosopher or citizen, wearing a draped white Greek chiton and leather sandals, perhaps wearing an olive wreath. Background: The Parthenon on the Acropolis in its prime, painted in original colors, white marble statues, bright blue sky, deep depth of field. Classical beauty, photorealistic, 8k, serene atmosphere.',
     icon: '🏺',
   },
   {
     id: 'aztec-empire',
     name: 'Aztec Empire',
     description: 'Feathers, gold, and Tenochtitlan.',
-    prompt: 'Cinematic shot, Tenochtitlan, 1500. The subject is an Aztec warrior or noble wearing a headdress with vibrant quetzal feathers, jade ear spools, and gold jewelry. Background: The Templo Mayor pyramid, canals filled with boats, vibrant colors, tropical atmosphere, detailed textures.',
+    prompt: 'Cinematic shot, Tenochtitlan, 1500. The subject is an Aztec warrior or noble, wearing a spectacular headdress with vibrant green quetzal feathers, jade ear spools, and gold jewelry. Background: The Templo Mayor pyramid, canals filled with boats and floating gardens (chinampas). Vibrant colors, tropical atmosphere, detailed textures of stone and feathers, sunlight.',
     icon: '☀️',
   },
   {
     id: 'tang-dynasty',
     name: 'Tang Dynasty',
     description: 'Golden age of Chinese culture.',
-    prompt: 'Cinematic shot, Chang\'an, 700 AD. The subject is wearing flowing Hanfu silk robes with wide sleeves and intricate embroidery. Background: An imperial palace courtyard with red wooden pillars, paper lanterns glowing softly at dusk, traditional Chinese architecture, elegant and majestic, cinematic lighting.',
+    prompt: 'Cinematic shot, Chang\'an, 700 AD. The subject is a noble or scholar, wearing flowing Hanfu silk robes with wide sleeves and intricate embroidery, hair styled in a traditional bun. Background: An imperial palace courtyard with red wooden pillars, curved roofs, and paper lanterns glowing softly at dusk. Traditional Chinese architecture, elegant and majestic, cinematic lighting, rich reds and golds.',
     icon: '🏮',
   },
   {
     id: 'flower-power',
     name: 'Flower Power 60s',
     description: 'Peace, love, and music.',
-    prompt: 'Cinematic shot, Woodstock, 1969. The subject is a hippie wearing tie-dye, a flower crown, round sunglasses, and beads. Background: A grassy festival field, a painted VW bus, lens flare, warm sunny vibe, film grain, vintage Kodachrome look, nostalgic.',
+    prompt: 'Cinematic shot, Woodstock, 1969. The subject is a hippie, wearing a tie-dye shirt, a flower crown, round sunglasses, and peace sign beads. Background: A grassy festival field with a crowd, a painted VW bus, acoustic guitars. Lens flare, warm sunny vibe, film grain, vintage Kodachrome look, nostalgic, colorful.',
     icon: '☮️',
   },
   {
     id: 'fifties-diner',
     name: '50s Rock n Roll',
     description: 'Milkshakes and jukeboxes.',
-    prompt: 'Cinematic shot, USA, 1955. The subject is a greaser in a leather jacket and jeans or a girl in a poodle skirt and saddle shoes. Background: A retro chrome-and-neon diner interior, checkerboard floor, red vinyl booths, a jukebox, milkshake on the table, nostalgic Americana, vibrant colors.',
+    prompt: 'Cinematic shot, USA, 1955. The subject is a greaser in a leather jacket and jeans, or a girl in a poodle skirt and saddle shoes. Background: A retro chrome-and-neon diner interior, black and white checkerboard floor, red vinyl booths, a Wurlitzer jukebox, a milkshake on the table. Nostalgic Americana, vibrant colors, bright lighting, rock and roll vibe.',
     icon: '🍔',
   },
   {
     id: 'french-revolution',
     name: 'French Revolution',
     description: 'Liberty, Equality, Fraternity.',
-    prompt: 'Cinematic shot, Paris, 1789. The subject is a revolutionary wearing a phrygian cap, tricolor cockade, and 18th-century commoner clothes. Background: A chaotic Paris street with a barricade of furniture, smoke, French flags waving, dramatic lighting, revolutionary spirit, highly detailed.',
+    prompt: 'Cinematic shot, Paris, 1789. The subject is a revolutionary, wearing a phrygian cap, a tricolor cockade, and 18th-century commoner clothes (sans-culottes). Background: A chaotic Paris street with a barricade made of furniture and cobblestones, smoke filling the air, French flags waving. Dramatic lighting, revolutionary spirit, highly detailed, historical intensity.',
     icon: '🇫🇷',
   },
   {
     id: 'industrial-revolution',
     name: 'Industrial Age',
     description: 'Steam power and factories.',
-    prompt: 'Cinematic shot, Industrial Era, 1850. The subject is a factory owner in a top hat and frock coat or a worker in a flat cap and suspenders, soot-stained. Background: A brick factory interior with massive steam engines, gears, brass pipes, atmospheric steam and smoke, moody lighting, steampunk vibe.',
+    prompt: 'Cinematic shot, Industrial Era, 1850. The subject is a factory owner in a top hat and frock coat, or a worker in a flat cap and suspenders, face smudged with soot. Background: A massive brick factory interior with giant steam engines, turning gears, brass pipes, and atmospheric steam and smoke. Moody lighting, shafts of light through high windows, steampunk vibe, gritty.',
     icon: '⚙️',
   },
   {
     id: 'maya-jungle',
     name: 'Mayan Jungle',
     description: 'Hidden temples and jade.',
-    prompt: 'Cinematic shot, Mayan City, 800 AD. The subject is Maya royalty wearing jaguar skin, heavy jade jewelry, and body paint. Background: A stone step-pyramid rising out of a dense misty rainforest, shafts of sunlight piercing the canopy, mossy textures, ancient mystery, photorealistic.',
+    prompt: 'Cinematic shot, Mayan City, 800 AD. The subject is Maya royalty, wearing jaguar skin, heavy jade jewelry, and body paint. Background: A massive stone step-pyramid rising out of a dense, misty rainforest, shafts of sunlight piercing the canopy, mossy stone textures. Ancient mystery, photorealistic, lush greenery, atmospheric.',
     icon: '🌿',
   },
   {
     id: 'ottoman-empire',
     name: 'Ottoman Empire',
     description: 'Bazaars and minarets.',
-    prompt: 'Cinematic shot, Constantinople, 1600. The subject is wearing a rich brocade kaftan and an intricate turban. Background: The Grand Bazaar, shelves stacked with colorful spices, carpets, and mosaic lamps, warm ambient lighting, rich textures and patterns, detailed.',
+    prompt: 'Cinematic shot, Constantinople, 1600. The subject is a merchant or noble, wearing a rich brocade kaftan and an intricate turban. Background: The bustling Grand Bazaar, shelves stacked with colorful spices, Persian carpets, and mosaic glass lamps. Warm ambient lighting, rich textures and intricate patterns, architectural arches, detailed.',
     icon: '🕌',
   },
   {
     id: 'ice-age',
     name: 'Ice Age Tundra',
     description: 'Glaciers and mammoths.',
-    prompt: 'Cinematic shot, Pleistocene Epoch. The subject is wrapped in heavy mammoth fur clothing with frost on their face. Background: A vast frozen tundra landscape, glaciers, a herd of woolly mammoths in the distance, aurora borealis in the night sky, cold blue tones, photorealistic.',
+    prompt: 'Cinematic shot, Pleistocene Epoch. The subject is a primitive human, wrapped in heavy mammoth fur clothing, with frost on their face and hair. Background: A vast, frozen tundra landscape with blue glaciers, a herd of woolly mammoths walking in the distance, aurora borealis in the night sky. Cold blue tones, photorealistic, snow textures, dramatic.',
     icon: '❄️',
   },
   {
     id: 'ancient-babylon',
     name: 'Babylonian Gardens',
     description: 'Hanging gardens of wonder.',
-    prompt: 'Cinematic shot, Babylon, 600 BC. The subject is wearing Mesopotamian royal garments with fringed fabric and gold armbands. Background: The Hanging Gardens, terraces overflowing with exotic plants and flowers, blue glazed brick walls with lion reliefs, golden desert sunlight, majestic.',
+    prompt: 'Cinematic shot, Babylon, 600 BC. The subject is a Babylonian royal, wearing Mesopotamian garments with fringed fabric and gold armbands. Background: The Hanging Gardens of Babylon, terraces overflowing with exotic plants, flowers, and waterfalls, blue glazed brick walls with lion reliefs (Ishtar Gate style). Golden desert sunlight, majestic, lush and vibrant.',
     icon: '🌴',
   },
   {
     id: 'grunge-90s',
     name: '90s Grunge',
     description: 'Flannel, angst, and rock.',
-    prompt: 'Cinematic shot, Seattle, 1992. The subject is wearing a plaid flannel shirt, ripped jeans, combat boots, and messy hair. Background: A dim basement practice space with band posters, amplifiers, moody lighting, gritty texture, alternative rock aesthetic, flash photography style.',
+    prompt: 'Cinematic shot, Seattle, 1992. The subject is a grunge rocker, wearing a plaid flannel shirt tied around the waist, ripped jeans, combat boots, and messy hair. Background: A dim basement practice space with band posters on the wall, amplifiers, moody lighting, cigarette smoke. Gritty texture, alternative rock aesthetic, flash photography style.',
     icon: '🎸',
   },
   {
     id: 'y2k-digital',
     name: 'Y2K Hacker',
     description: 'Digital rain and trench coats.',
-    prompt: 'Cinematic shot, The Matrix inspired, 1999. The subject is wearing a long black leather trench coat and dark sunglasses. Background: A dark environment with cascading green digital code rain, computer servers, green tint color grading, cyber-thriller vibe, sharp focus.',
+    prompt: 'Cinematic shot, The Matrix inspired, 1999. The subject is a hacker, wearing a long black leather trench coat, dark sunglasses, and combat boots. Background: A dark, industrial environment with cascading green digital code rain (Matrix code), computer servers, green tint color grading. Cyber-thriller vibe, sharp focus, glossy textures.',
     icon: '💾',
   },
   {
     id: 'golden-hollywood',
     name: 'Golden Hollywood',
     description: 'Red carpets and spotlights.',
-    prompt: 'Cinematic shot, Hollywood Premiere, 1935. The subject is a movie star in a silk tuxedo or a satin evening gown with fur stole. Background: A red carpet event with paparazzi flashbulbs going off, vintage movie palace marquee lights, black and white or sepia glamour photography style.',
+    prompt: 'Cinematic shot, Hollywood Premiere, 1935. The subject is a movie star, wearing a sharp tuxedo or a satin evening gown with a fur stole and diamond jewelry. Background: A red carpet event with paparazzi flashbulbs going off, vintage movie palace marquee lights, art deco architecture. Black and white or sepia glamour photography style, soft lighting, elegant.',
     icon: '🎥',
   },
   {
     id: 'atlantis-lost',
     name: 'Lost Atlantis',
     description: 'Underwater kingdom of legend.',
-    prompt: 'Cinematic shot, Lost City of Atlantis. The subject is an Atlantean royal wearing iridescent scale armor and bioluminescent jewelry. Background: Majestic underwater architecture made of pearl and coral, shafts of sunlight filtering down through deep blue water, schools of glowing fish, ethereal and magical, 8k resolution.',
+    prompt: 'Cinematic shot, Lost City of Atlantis. The subject is an Atlantean royal, wearing iridescent scale armor and bioluminescent jewelry. Background: Majestic underwater architecture made of pearl, coral, and gold, shafts of sunlight filtering down through deep blue water, schools of glowing fish. Ethereal, magical, 8k resolution, distortion from water.',
     icon: '🧜‍♀️',
   },
   {
     id: 'solarpunk-future',
     name: 'Solarpunk Utopia',
     description: 'Green tech and bright futures.',
-    prompt: 'Cinematic shot, Solarpunk Utopia, 2100. The subject is wearing futuristic organic clothing made of leaves and light-weaving fabrics. Background: A gleaming city where nature and technology merge, glass towers covered in hanging gardens, wind turbines spinning in a clear blue sky, bright and optimistic aesthetic.',
+    prompt: 'Cinematic shot, Solarpunk Utopia, 2100. The subject is a citizen of the future, wearing futuristic organic clothing made of leaves and light-weaving fabrics. Background: A gleaming city where nature and technology merge, glass towers covered in hanging gardens, wind turbines, solar panels, clear blue sky. Bright, optimistic aesthetic, lush greenery, soft natural light.',
     icon: '🌱',
   },
   {
     id: 'incan-empire',
     name: 'Incan Citadel',
     description: 'High peaks of the Andes.',
-    prompt: 'Cinematic shot, Machu Picchu, 1500. The subject is an Incan noble wearing a colorful tunic with geometric patterns and gold ornaments. Background: The iconic stone citadel perched high in the Andes mountains, terraced fields, llamas grazing in the mist, dramatic mountain peaks, golden hour lighting.',
+    prompt: 'Cinematic shot, Machu Picchu, 1500. The subject is an Incan noble, wearing a colorful woven tunic with geometric patterns and gold ear spools. Background: The iconic stone citadel perched high in the Andes mountains, terraced fields, llamas grazing in the mist, dramatic mountain peaks. Golden hour lighting, atmospheric clouds, detailed stone textures.',
     icon: '🦙',
   },
   {
     id: 'steampunk-sky',
     name: 'Steampunk Skies',
     description: 'Airships and brass gears.',
-    prompt: 'Cinematic shot, Steampunk Airship, 1895. The subject is an airship captain wearing a leather aviator cap, brass goggles, and a mechanical gauntlet. Background: The deck of a flying copper dreadnought soaring above the clouds, spinning propellers, steam venting from brass pipes, adventurous and mechanical.',
+    prompt: 'Cinematic shot, Steampunk Airship, 1895. The subject is an airship captain, wearing a leather aviator cap, brass goggles, and a mechanical gauntlet. Background: The deck of a flying copper dreadnought soaring above the clouds, spinning propellers, steam venting from brass pipes, clockwork mechanisms. Adventurous, mechanical, golden lighting, detailed metal textures.',
     icon: '🎈',
   },
   {
     id: 'gothic-horror',
     name: 'Gothic Horror',
     description: 'Dark castles and vampires.',
-    prompt: 'Cinematic shot, Gothic Horror, 1880. The subject is a vampire hunter or mysterious count in a high-collared black velvet coat holding a lantern. Background: A crumbling stone castle corridor, cobwebs, lightning flashing through a stained-glass window, dark shadows, eerie and atmospheric.',
+    prompt: 'Cinematic shot, Gothic Horror, 1880. The subject is a vampire hunter or mysterious count, wearing a high-collared black velvet coat and holding a lantern. Background: A crumbling stone castle corridor, thick cobwebs, lightning flashing through a stained-glass window, dark shadows. Eerie, atmospheric, blue and black color palette, spooky.',
     icon: '🦇',
   },
   {
     id: 'scottish-highlands',
     name: 'Scottish Highlands',
     description: 'Mist, moors, and ancient castles.',
-    prompt: 'Cinematic shot, Scotland, 1740. The subject is a rugged Highlander warrior wearing a weathered tartan kilt, leather sporran, and fur cloak, holding a basket-hilted broadsword. Background: Misty, dramatic rolling green highlands, purple heather, a stone circle standing mysteriously in the fog, moody overcast sky, Outlander aesthetic, 8k resolution.',
+    prompt: 'Cinematic shot, Scotland, 1740. The subject is a rugged Highlander warrior, wearing a weathered tartan kilt, leather sporran, and fur cloak, holding a basket-hilted broadsword. Background: Misty, dramatic rolling green highlands, purple heather, a stone circle standing mysteriously in the fog, moody overcast sky. Outlander aesthetic, 8k resolution, raw nature.',
     icon: '🏴󠁧󠁢󠁳󠁣󠁴󠁿',
   },
   {
     id: 'martian-frontier',
     name: 'Martian Frontier',
     description: 'Life on the Red Planet.',
-    prompt: 'Cinematic shot, Mars Colony, 2080. The subject is a futuristic colonist wearing a sleek, dust-covered EVA suit with a gold-tinted visor reflecting the landscape. Background: The rusted red dunes of Mars, a high-tech geodesic bio-dome city in the distance, two moons in the salmon-pink sky, harsh realistic lighting, sci-fi masterpiece.',
+    prompt: 'Cinematic shot, Mars Colony, 2080. The subject is a futuristic colonist, wearing a sleek, dust-covered EVA suit with a gold-tinted visor reflecting the landscape. Background: The rusted red dunes of Mars, a high-tech geodesic bio-dome city in the distance, two moons in the salmon-pink sky. Harsh realistic lighting, sci-fi masterpiece, red and orange tones.',
     icon: '🪐',
   },
   {
     id: 'bioluminescent-forest',
     name: 'Alien Forest',
     description: 'Glowing flora and eternal night.',
-    prompt: 'Cinematic shot, Alien Jungle, Midnight. The subject is an ethereal explorer or native being with subtle glowing tribal markings on their skin. Background: A dense, magical forest filled with giant phosphorescent mushrooms, hanging vines glowing blue and purple, floating spores like fireflies, mystical and dreamlike atmosphere, Avatar style.',
+    prompt: 'Cinematic shot, Alien Jungle, Midnight. The subject is an ethereal explorer or native being, with subtle glowing tribal markings on their skin. Background: A dense, magical forest filled with giant phosphorescent mushrooms, hanging vines glowing blue and purple, floating spores like fireflies. Mystical, dreamlike atmosphere, Avatar style, dark background with neon highlights.',
     icon: '🍄',
   },
   {
     id: 'comic-book',
     name: 'Comic Book',
     description: 'Bold lines and heroic poses.',
-    prompt: 'Comic book art style, Golden Age. The subject is a superhero standing heroically, wearing a dynamic costume with a cape fluttering in the wind. Background: A stylized metropolis skyline, dramatic action lines (speed lines), halftone dot shading, bold black outlines, vibrant primary colors, speech bubble "POW!" visual effect.',
+    prompt: 'Comic book art style, Golden Age. The subject is a superhero, standing heroically with hands on hips, wearing a dynamic costume with a cape fluttering in the wind. Background: A stylized metropolis skyline, dramatic action lines (speed lines), halftone dot shading, bold black outlines, vibrant primary colors, speech bubble "POW!" visual effect. Illustration style.',
     icon: '💥',
   },
   {
     id: 'versailles-court',
     name: 'Royal Versailles',
     description: 'Opulence, wigs, and gold.',
-    prompt: 'Cinematic shot, Palace of Versailles, 1770. The subject is French royalty wearing a towering powdered wig, white face powder, and an extravagant silk gown or velvet coat with gold embroidery. Background: The Hall of Mirrors, reflecting crystal chandeliers, gold leaf detailing, frescoed ceilings, lavish and decadent Rococo atmosphere.',
+    prompt: 'Cinematic shot, Palace of Versailles, 1770. The subject is French royalty, wearing a towering powdered wig, white face powder, and an extravagant silk gown or velvet coat with gold embroidery. Background: The Hall of Mirrors, reflecting crystal chandeliers, gold leaf detailing, frescoed ceilings. Lavish, decadent Rococo atmosphere, bright and airy, pastel colors.',
     icon: '🍰',
   },
   {
     id: 'arabian-nights',
     name: 'Arabian Nights',
     description: 'Magic carpets and desert stars.',
-    prompt: 'Cinematic shot, Ancient Baghdad Legend. The subject is a rogue or princess wearing flowing silk pants, a vest, and a turban, holding a magic lamp. Background: A moonlit desert city skyline with onion domes and minarets, a flying carpet hovering nearby, starry night sky, magical sparkles, warm lantern light.',
+    prompt: 'Cinematic shot, Ancient Baghdad Legend. The subject is a rogue or princess, wearing flowing silk pants, a vest, and a turban, holding a magic lamp. Background: A moonlit desert city skyline with onion domes and minarets, a flying carpet hovering nearby, starry night sky, magical sparkles. Warm lantern light, deep blues and golds, fantasy style.',
     icon: '🌙',
   },
   {
     id: 'pixel-verse',
     name: 'Pixel Verse',
     description: '8-bit retro gaming world.',
-    prompt: 'Pixel art aesthetic, 16-bit RPG. The subject is a pixelated hero character wearing armor. Background: A blocky fantasy world with pixelated trees, clouds, and a castle in the distance, vibrant retro color palette, scanline effect, nostalgic gaming vibe.',
+    prompt: 'Pixel art aesthetic, 16-bit RPG. The subject is a pixelated hero character, wearing armor or adventurer clothes. Background: A blocky fantasy world with pixelated trees, fluffy clouds, and a castle in the distance. Vibrant retro color palette, scanline effect, nostalgic gaming vibe, SNES style graphics.',
     icon: '👾',
   },
   {
     id: 'claymation',
     name: 'Clay World',
     description: 'Stop-motion animation style.',
-    prompt: 'Claymation stop-motion style. The subject appears to be made of modeling clay with visible fingerprints and soft textures. Background: A handcrafted miniature set made of felt, cardboard, and clay trees, shallow depth of field (tilt-shift), warm studio lighting, whimsical Aardman animation look.',
+    prompt: 'Claymation stop-motion style. The subject appears to be made of modeling clay with visible fingerprints and soft, rounded textures. Background: A handcrafted miniature set made of felt, cardboard, and clay trees. Shallow depth of field (tilt-shift), warm studio lighting, whimsical Aardman animation look, playful.',
     icon: '🧱',
   },
   {
     id: 'toy-world',
     name: 'Toy World',
     description: 'Living in a macro universe.',
-    prompt: 'Macro photography, Toy Story aesthetic. The subject is a high-quality articulated action figure or doll with plastic sheen textures. Background: A giant-scale child\'s bedroom floor, massive wooden blocks, marbles, and fuzzy carpet strands, bright playful lighting, bokeh effect.',
+    prompt: 'Macro photography, Toy Story aesthetic. The subject is a high-quality articulated action figure or doll with plastic sheen textures. Background: A giant-scale child\'s bedroom floor, massive wooden blocks, marbles, and fuzzy carpet strands. Bright playful lighting, bokeh effect, sense of scale.',
     icon: '🧸',
   },
   {
     id: 'surreal-dream',
     name: 'Surreal Dream',
     description: 'Melting clocks and floating islands.',
-    prompt: 'Surrealist masterpiece. The subject is floating or distorted, wearing melting clock accessories. Background: A vast, empty desert landscape with impossible geometry, floating islands, giant eyes in the sky, long shadows, Salvador Dali and Magritte inspired, dreamlike and mysterious.',
+    prompt: 'Surrealist masterpiece. The subject is floating or distorted, perhaps wearing melting clock accessories or a bowler hat. Background: A vast, empty desert landscape with impossible geometry, floating islands, giant eyes in the sky, long shadows. Salvador Dali and Magritte inspired, dreamlike, mysterious, oil painting style.',
     icon: '🎨',
   },
   {
     id: 'retro-anime',
     name: 'Retro Anime',
     description: '90s cel-shaded animation style.',
-    prompt: 'Cinematic shot, 1990s Anime style. The subject is drawn in a vintage anime aesthetic with cel-shading, large expressive eyes, and dramatic hair. Background: A detailed hand-painted watercolor background of a city at sunset or a starry night, grain, chromatic aberration, retro TV broadcast effect, high quality animation keyframe.',
+    prompt: 'Cinematic shot, 1990s Anime style. The subject is drawn in a vintage anime aesthetic with cel-shading, large expressive eyes, and dramatic hair. Background: A detailed hand-painted watercolor background of a city at sunset or a starry night. Film grain, chromatic aberration, retro TV broadcast effect, high quality animation keyframe, emotional.',
     icon: '✨',
   }
 ];

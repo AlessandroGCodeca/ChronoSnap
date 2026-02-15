@@ -24,22 +24,18 @@ export const generateTimeTravelImage = async (
     const mimeType = getMimeType(base64Image);
     const cleanData = cleanBase64(base64Image);
 
+    // Simplified prompt to be more direct about the transformation
     let finalPrompt = `
-      You are a cinematic photo editor. 
-      Input: An image of a person.
-      Task: Create a high-quality, photorealistic image of this person in the following setting: ${eraPrompt}.
-      Instructions:
-      - The subject should be wearing period-appropriate clothing matching the era.
-      - The background should be a detailed, cinematic scene from that era.
-      - Maintain the general likeness, gender, and expression of the person.
-      - Ensure high aesthetic quality, perfect lighting, and composition.
+      Input image provided.
+      
+      Task: Transform the person in the input image to appear in this setting: ${eraPrompt}.
+      
+      Requirements:
+      - Keep the person's facial identity and features from the input image.
+      - Change their clothing to match the setting.
+      - ${figurePrompt ? `Include ${figurePrompt} in the scene.` : 'Ensure the background is detailed and accurate to the era.'}
+      - Photorealistic, cinematic lighting, high resolution.
     `;
-
-    if (figurePrompt) {
-      finalPrompt += `\n      - The person should be depicted standing next to or interacting with ${figurePrompt}.`;
-    }
-
-    finalPrompt += `\n      - Return ONLY the generated image.`;
 
     const response = await ai.models.generateContent({
       model: 'gemini-2.5-flash-image',
@@ -67,26 +63,41 @@ export const generateTimeTravelImage = async (
       }
     });
 
-    // Extract image from response safely
-    const parts = response.candidates?.[0]?.content?.parts;
-    if (parts) {
-      for (const part of parts) {
-        if (part.inlineData) {
-          return `data:image/png;base64,${part.inlineData.data}`;
-        }
-      }
-    }
-    
-    // Check if there was a finishReason other than STOP which might indicate filtering
-    const finishReason = response.candidates?.[0]?.finishReason;
-    if (finishReason) {
-       console.warn(`Generation finished with reason: ${finishReason}`);
+    if (!response.candidates || response.candidates.length === 0) {
+      throw new Error("The AI model blocked the request. Try a different photo or era.");
     }
 
-    throw new Error("No image generated. The model may have filtered the response.");
-  } catch (error) {
+    const candidate = response.candidates[0];
+    const parts = candidate.content?.parts;
+    
+    // 1. Check for image
+    const inlineDataPart = parts?.find(p => p.inlineData);
+    if (inlineDataPart?.inlineData?.data) {
+      return `data:image/png;base64,${inlineDataPart.inlineData.data}`;
+    }
+    
+    // 2. Check for text refusal (and return it as the error message)
+    const textPart = parts?.find(p => p.text);
+    if (textPart?.text) {
+        console.warn("Model returned text instead of image:", textPart.text);
+        throw new Error(textPart.text); 
+    }
+    
+    // 3. Check finish reason if no content was found
+    const finishReason = candidate.finishReason;
+    if (finishReason) {
+       console.warn(`Generation finished with reason: ${finishReason}`);
+       if (finishReason === 'SAFETY') {
+         throw new Error("The generation was stopped by safety filters. The prompt or image may have been flagged.");
+       }
+       throw new Error(`The generation finished with reason: ${finishReason} but no image was returned.`);
+    }
+
+    throw new Error("No image generated. The model response was empty.");
+  } catch (error: any) {
     console.error("Time Travel Error:", error);
-    throw error;
+    // Propagate the error message directly if it's user-friendly
+    throw new Error(error.message || "Time travel failed due to an unknown error.");
   }
 };
 
@@ -102,6 +113,14 @@ export const editImageWithPrompt = async (
     const mimeType = getMimeType(base64Image);
     const cleanData = cleanBase64(base64Image);
 
+    // Direct instruction prompt
+    const finalPrompt = `
+      Input image provided.
+      Instruction: ${instruction}
+      
+      Execute the instruction on the input image. Return a photorealistic image.
+    `;
+
     const response = await ai.models.generateContent({
       model: 'gemini-2.5-flash-image',
       contents: {
@@ -113,7 +132,7 @@ export const editImageWithPrompt = async (
             },
           },
           {
-            text: `Edit this image: ${instruction}. Return the edited image.`,
+            text: finalPrompt,
           },
         ],
       },
@@ -128,26 +147,35 @@ export const editImageWithPrompt = async (
       }
     });
 
-    // Extract image from response safely
-    const parts = response.candidates?.[0]?.content?.parts;
-    if (parts) {
-      for (const part of parts) {
-        if (part.inlineData) {
-          return `data:image/png;base64,${part.inlineData.data}`;
-        }
-      }
+    if (!response.candidates || response.candidates.length === 0) {
+      throw new Error("No candidates returned.");
     }
 
-    throw new Error("No image generated.");
-  } catch (error) {
+    const candidate = response.candidates[0];
+    const parts = candidate.content?.parts;
+    
+    const inlineDataPart = parts?.find(p => p.inlineData);
+    if (inlineDataPart?.inlineData?.data) {
+      return `data:image/png;base64,${inlineDataPart.inlineData.data}`;
+    }
+
+    const textPart = parts?.find(p => p.text);
+    if (textPart?.text) {
+        throw new Error(textPart.text);
+    }
+
+    const finishReason = candidate.finishReason;
+    if (finishReason === 'SAFETY') {
+      throw new Error("The edit was blocked by safety filters.");
+    }
+
+    throw new Error("No edited image generated.");
+  } catch (error: any) {
     console.error("Magic Edit Error:", error);
-    throw error;
+    throw new Error(error.message || "Magic edit failed.");
   }
 };
 
-/**
- * Analyzes an image using Gemini 3 Pro Preview.
- */
 export const analyzeImage = async (
   base64Image: string,
   prompt?: string
@@ -175,7 +203,6 @@ export const analyzeImage = async (
         ],
       },
       config: {
-        // Using a lower thinking budget for faster analysis
         thinkingConfig: { thinkingBudget: 1024 },
         safetySettings: [
           { category: HarmCategory.HARM_CATEGORY_HARASSMENT, threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH },
@@ -186,8 +213,17 @@ export const analyzeImage = async (
         ],
       }
     });
+    
+    if (response.text) {
+        return response.text;
+    }
+    
+    // Use candidate check if .text helper is empty
+    const candidate = response.candidates?.[0];
+    const textPart = candidate?.content?.parts?.find(p => p.text);
+    if (textPart?.text) return textPart.text;
 
-    return response.text || "Could not analyze the image.";
+    return "Could not analyze the image.";
   } catch (error) {
     console.error("Analysis Error:", error);
     throw error;
