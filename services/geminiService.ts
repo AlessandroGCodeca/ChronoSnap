@@ -58,15 +58,23 @@ export const generateTimeTravelImage = async (
       },
     });
 
-    // Extract image from response
-    if (response.candidates && response.candidates[0].content.parts) {
-      for (const part of response.candidates[0].content.parts) {
+    // Extract image from response safely
+    const parts = response.candidates?.[0]?.content?.parts;
+    if (parts) {
+      for (const part of parts) {
         if (part.inlineData) {
           return `data:image/png;base64,${part.inlineData.data}`;
         }
       }
     }
-    throw new Error("No image generated.");
+    
+    // Check if there was a finishReason other than STOP which might indicate filtering
+    const finishReason = response.candidates?.[0]?.finishReason;
+    if (finishReason) {
+       console.warn(`Generation finished with reason: ${finishReason}`);
+    }
+
+    throw new Error("No image generated. The model may have filtered the response.");
   } catch (error) {
     console.error("Time Travel Error:", error);
     throw error;
@@ -102,13 +110,16 @@ export const editImageWithPrompt = async (
       },
     });
 
-    if (response.candidates && response.candidates[0].content.parts) {
-      for (const part of response.candidates[0].content.parts) {
+    // Extract image from response safely
+    const parts = response.candidates?.[0]?.content?.parts;
+    if (parts) {
+      for (const part of parts) {
         if (part.inlineData) {
           return `data:image/png;base64,${part.inlineData.data}`;
         }
       }
     }
+
     throw new Error("No image generated.");
   } catch (error) {
     console.error("Magic Edit Error:", error);
