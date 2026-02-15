@@ -211,10 +211,6 @@ const App: React.FC = () => {
                  <ArrowLeft size={16} className="mr-2" /> New Session
                </Button>
             )}
-            <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-900/50 rounded-full border border-white/5 text-[10px] font-mono text-emerald-400">
-               <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></div>
-               SYSTEM ONLINE
-            </div>
           </div>
         </div>
       </header>
