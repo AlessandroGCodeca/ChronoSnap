@@ -41,3 +41,12 @@ export interface FilterOption {
   name: string;
   css: string;
 }
+
+export interface TextOverlayConfig {
+  text: string;
+  color: string;
+  fontSize: 'small' | 'medium' | 'large' | 'massive';
+  isBold: boolean;
+  isItalic: boolean;
+  position: 'top' | 'center' | 'bottom';
+}

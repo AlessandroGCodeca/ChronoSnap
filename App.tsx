@@ -7,10 +7,10 @@ import FilterPanel from './components/FilterPanel';
 import Button from './components/Button';
 import ZoomableImage from './components/ZoomableImage';
 import ProcessingOverlay from './components/ProcessingOverlay';
-import { AppMode, Era, FilterOption, HistoricalFigure } from './types';
+import { AppMode, Era, FilterOption, HistoricalFigure, TextOverlayConfig } from './types';
 import { FILTERS } from './constants';
 import { generateTimeTravelImage, editImageWithPrompt, analyzeImage } from './services/geminiService';
-import { applyFilterToImage } from './services/imageService';
+import { applyFilterToImage, applyTextOverlay } from './services/imageService';
 import { History, Clock, Wand2, Search, ArrowLeft, Download, RefreshCw, Palette, AlertTriangle, Sparkles, Aperture } from 'lucide-react';
 
 const App: React.FC = () => {
@@ -50,13 +50,19 @@ const App: React.FC = () => {
     return baseImage;
   };
 
-  const handleTimeTravel = async (era: Era, figure?: HistoricalFigure) => {
+  const handleTimeTravel = async (era: Era, figure?: HistoricalFigure, textOverlay?: TextOverlayConfig) => {
     if (!currentImage) return;
     setIsProcessing(true);
     setErrorMsg(null);
     try {
       const inputImage = await getProcessedImage();
-      const result = await generateTimeTravelImage(inputImage, era.prompt, figure?.prompt);
+      let result = await generateTimeTravelImage(inputImage, era.prompt, figure?.prompt);
+      
+      // Apply text overlay if provided
+      if (textOverlay) {
+         result = await applyTextOverlay(result, textOverlay);
+      }
+      
       setGeneratedImage(result);
       setActiveFilter(FILTERS[0]); 
     } catch (error) {

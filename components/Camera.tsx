@@ -9,6 +9,7 @@ interface CameraProps {
 const Camera: React.FC<CameraProps> = ({ onCapture }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [isStreamActive, setIsStreamActive] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -68,7 +69,13 @@ const Camera: React.FC<CameraProps> = ({ onCapture }) => {
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file) processFile(file);
+    if (file) {
+      processFile(file);
+    }
+    // Reset input value to allow selecting the same file again
+    if (e.target) {
+      e.target.value = '';
+    }
   };
 
   const handleDragOver = (e: React.DragEvent) => {
@@ -86,6 +93,10 @@ const Camera: React.FC<CameraProps> = ({ onCapture }) => {
     setIsDragging(false);
     const file = e.dataTransfer.files?.[0];
     if (file) processFile(file);
+  };
+
+  const handleTriggerUpload = () => {
+    fileInputRef.current?.click();
   };
 
   useEffect(() => {
@@ -184,18 +195,22 @@ const Camera: React.FC<CameraProps> = ({ onCapture }) => {
             <Button onClick={startCamera} icon={<Aperture size={20} />} className="px-8 py-4 text-lg bg-indigo-600 hover:bg-indigo-500 shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:shadow-[0_0_30px_rgba(79,70,229,0.5)] border border-indigo-400/20">
               Initialize Camera
             </Button>
-            <div className="relative">
-              <input 
+            
+            <input 
+                ref={fileInputRef}
                 type="file" 
                 accept="image/*" 
                 onChange={handleFileUpload} 
-                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-                title="Upload an image"
-              />
-              <Button variant="secondary" icon={<Upload size={20} />} className="px-8 py-4 text-lg border-slate-700 bg-slate-900 hover:bg-slate-800">
+                className="hidden" 
+            />
+            <Button 
+                variant="secondary" 
+                onClick={handleTriggerUpload}
+                icon={<Upload size={20} />} 
+                className="px-8 py-4 text-lg border-slate-700 bg-slate-900 hover:bg-slate-800"
+            >
                 Upload Image
-              </Button>
-            </div>
+            </Button>
           </>
         ) : (
           <>

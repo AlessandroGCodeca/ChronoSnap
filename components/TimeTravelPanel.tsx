@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Era, HistoricalFigure } from '../types';
+import { Era, HistoricalFigure, TextOverlayConfig } from '../types';
 import { ERAS, HISTORICAL_FIGURES, SURPRISE_PROMPTS } from '../constants';
 import Button from './Button';
-import { Sparkles, Check, Search, ChevronDown, User, Dices } from 'lucide-react';
+import { Sparkles, Check, Search, ChevronDown, User, Dices, Type, Palette, AlignVerticalJustifyCenter, AlignVerticalJustifyStart, AlignVerticalJustifyEnd, Bold, Italic } from 'lucide-react';
 
 interface TimeTravelPanelProps {
-  onGenerate: (era: Era, figure?: HistoricalFigure) => void;
+  onGenerate: (era: Era, figure?: HistoricalFigure, textOverlay?: TextOverlayConfig) => void;
   isProcessing: boolean;
 }
 
@@ -16,6 +16,25 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Text Overlay State
+  const [overlayText, setOverlayText] = useState('');
+  const [overlayColor, setOverlayColor] = useState('#ffffff');
+  const [overlaySize, setOverlaySize] = useState<'small' | 'medium' | 'large' | 'massive'>('medium');
+  const [overlayBold, setOverlayBold] = useState(false);
+  const [overlayItalic, setOverlayItalic] = useState(false);
+  const [overlayPosition, setOverlayPosition] = useState<'top' | 'center' | 'bottom'>('bottom');
+
+  const colors = [
+    '#ffffff', // White
+    '#000000', // Black
+    '#ef4444', // Red
+    '#eab308', // Yellow
+    '#22c55e', // Green
+    '#3b82f6', // Blue
+    '#a855f7', // Purple
+    '#ec4899', // Pink
+  ];
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -46,6 +65,15 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
   };
 
   const handleGenerate = () => {
+    const textConfig: TextOverlayConfig | undefined = overlayText.trim() ? {
+      text: overlayText,
+      color: overlayColor,
+      fontSize: overlaySize,
+      isBold: overlayBold,
+      isItalic: overlayItalic,
+      position: overlayPosition
+    } : undefined;
+
     if (customPrompt.trim()) {
       onGenerate({
         id: 'custom-era',
@@ -53,9 +81,9 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
         description: 'User generated era',
         prompt: customPrompt,
         icon: '✨'
-      }, selectedFigure || undefined);
+      }, selectedFigure || undefined, textConfig);
     } else if (selectedEra) {
-      onGenerate(selectedEra, selectedFigure || undefined);
+      onGenerate(selectedEra, selectedFigure || undefined, textConfig);
     }
   };
 
@@ -229,6 +257,74 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
           >
             Surprise Me
           </Button>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10 pt-4 mt-4">
+        <div className="flex items-center gap-2 mb-3">
+           <Type size={14} className="text-indigo-400" />
+           <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+             Add Caption (Optional)
+           </label>
+        </div>
+        
+        <div className="bg-slate-900/40 border border-white/5 rounded-xl p-3 space-y-3">
+           <input 
+             type="text" 
+             value={overlayText}
+             onChange={(e) => setOverlayText(e.target.value)}
+             placeholder="Enter text to overlay..."
+             className="w-full bg-black/30 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:border-indigo-500/50 focus:outline-none"
+           />
+           
+           {overlayText && (
+             <div className="space-y-3 animate-in slide-in-from-top-2">
+               {/* Controls Row */}
+               <div className="flex flex-wrap items-center gap-4">
+                 
+                 {/* Position */}
+                 <div className="flex bg-black/30 rounded-lg p-1 border border-white/5">
+                   <button onClick={() => setOverlayPosition('top')} className={`p-1.5 rounded ${overlayPosition === 'top' ? 'bg-slate-700 text-white' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyStart size={16} /></button>
+                   <button onClick={() => setOverlayPosition('center')} className={`p-1.5 rounded ${overlayPosition === 'center' ? 'bg-slate-700 text-white' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyCenter size={16} /></button>
+                   <button onClick={() => setOverlayPosition('bottom')} className={`p-1.5 rounded ${overlayPosition === 'bottom' ? 'bg-slate-700 text-white' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyEnd size={16} /></button>
+                 </div>
+
+                 {/* Style */}
+                 <div className="flex bg-black/30 rounded-lg p-1 border border-white/5">
+                    <button onClick={() => setOverlayBold(!overlayBold)} className={`p-1.5 rounded ${overlayBold ? 'bg-slate-700 text-white' : 'text-slate-400 hover:text-white'}`}><Bold size={16} /></button>
+                    <button onClick={() => setOverlayItalic(!overlayItalic)} className={`p-1.5 rounded ${overlayItalic ? 'bg-slate-700 text-white' : 'text-slate-400 hover:text-white'}`}><Italic size={16} /></button>
+                 </div>
+
+                 {/* Size */}
+                 <div className="flex items-center gap-2 bg-black/30 rounded-lg p-1 px-2 border border-white/5">
+                    <span className="text-[10px] text-slate-500 uppercase">Size</span>
+                    <select 
+                      value={overlaySize} 
+                      onChange={(e) => setOverlaySize(e.target.value as any)}
+                      className="bg-transparent text-xs text-white focus:outline-none cursor-pointer"
+                    >
+                      <option value="small">S</option>
+                      <option value="medium">M</option>
+                      <option value="large">L</option>
+                      <option value="massive">XL</option>
+                    </select>
+                 </div>
+               </div>
+
+               {/* Colors */}
+               <div className="flex flex-wrap gap-2">
+                 {colors.map(color => (
+                   <button
+                     key={color}
+                     onClick={() => setOverlayColor(color)}
+                     className={`w-6 h-6 rounded-full border-2 transition-transform hover:scale-110 ${overlayColor === color ? 'border-white scale-110 shadow-lg' : 'border-transparent opacity-70 hover:opacity-100'}`}
+                     style={{ backgroundColor: color }}
+                     aria-label={`Select color ${color}`}
+                   />
+                 ))}
+               </div>
+             </div>
+           )}
         </div>
       </div>
 
