@@ -94,7 +94,7 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
     }
   };
 
-  const filteredFigures = HISTORICAL_FIGURES.filter(figure => 
+  const filteredFigures = HISTORICAL_FIGURES.filter(figure =>
     figure.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     figure.description.toLowerCase().includes(searchQuery.toLowerCase())
   );
@@ -119,8 +119,8 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
             disabled={isProcessing}
             className={`
               relative p-3 rounded-xl text-left group transition-all duration-300 overflow-hidden flex flex-col gap-2
-              ${selectedEra?.id === era.id 
-                ? 'bg-indigo-900/40 border-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.4)] ring-1 ring-indigo-400/50 scale-105 z-10' 
+              ${selectedEra?.id === era.id
+                ? 'bg-indigo-900/40 border-indigo-400 shadow-[0_0_20px_rgba(99,102,241,0.4)] ring-1 ring-indigo-400/50 scale-105 z-10'
                 : 'bg-slate-900/40 border-transparent hover:border-indigo-500/30 hover:bg-slate-800/60'
               }
               border
@@ -129,7 +129,7 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
             {selectedEra?.id === era.id && (
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent pointer-events-none" />
             )}
-            
+
             <div className="flex justify-between items-center z-10">
               <span className="text-2xl filter drop-shadow-md transform group-hover:scale-110 transition-transform duration-300">{era.icon}</span>
               {selectedEra?.id === era.id && (
@@ -154,38 +154,38 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
       {/* Historical Figure Selector */}
       <div className="space-y-3 relative z-20" ref={dropdownRef}>
         <div className="flex items-center gap-2">
-           <User size={14} className="text-indigo-400" />
-           <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+          <User size={14} className="text-indigo-400" />
+          <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">
             Historical Companion
-           </label>
+          </label>
         </div>
-        
+
         <div className="relative">
           <button
             type="button"
             onClick={toggleDropdown}
             className={`w-full flex items-center justify-between bg-slate-900/60 border ${isDropdownOpen ? 'border-indigo-500 ring-1 ring-indigo-500/50' : 'border-white/10 hover:border-white/20'} rounded-xl px-4 py-3 text-sm transition-all text-slate-300 hover:text-white backdrop-blur-sm`}
           >
-             <div className="flex items-center gap-3">
-               {selectedFigure ? (
-                 <>
-                   <span className="text-lg">{selectedFigure.icon}</span>
-                   <span className="font-medium text-indigo-300">{selectedFigure.name}</span>
-                 </>
-               ) : (
-                 <span className="text-slate-500 italic">Select a figure to join you...</span>
-               )}
-             </div>
-             {selectedFigure ? (
-               <div 
-                 onClick={(e) => { e.stopPropagation(); setSelectedFigure(null); }}
-                 className="p-1 hover:bg-white/10 rounded-full"
-               >
-                 <span className="text-xs text-slate-500 hover:text-white transition-colors">Clear</span>
-               </div>
-             ) : (
-               <ChevronDown size={16} className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
-             )}
+            <div className="flex items-center gap-3">
+              {selectedFigure ? (
+                <>
+                  <span className="text-lg">{selectedFigure.icon}</span>
+                  <span className="font-medium text-indigo-300">{selectedFigure.name}</span>
+                </>
+              ) : (
+                <span className="text-slate-500 italic">Select a figure to join you...</span>
+              )}
+            </div>
+            {selectedFigure ? (
+              <div
+                onClick={(e) => { e.stopPropagation(); setSelectedFigure(null); }}
+                className="p-1 hover:bg-white/10 rounded-full"
+              >
+                <span className="text-xs text-slate-500 hover:text-white transition-colors">Clear</span>
+              </div>
+            ) : (
+              <ChevronDown size={16} className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+            )}
           </button>
 
           {isDropdownOpen && (
@@ -248,8 +248,8 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
             `}
             disabled={isProcessing}
           />
-          <Button 
-            variant="ghost" 
+          <Button
+            variant="ghost"
             size="sm"
             onClick={handleSurpriseMe}
             className="absolute bottom-2 right-2 text-xs text-indigo-400 hover:text-indigo-300 hover:bg-indigo-500/10 border border-indigo-500/20"
@@ -263,80 +263,80 @@ const TimeTravelPanel: React.FC<TimeTravelPanelProps> = ({ onGenerate, isProcess
 
       <div className="border-t border-white/5 pt-4 mt-4 bg-black/20 rounded-xl p-4">
         <div className="flex items-center gap-2 mb-3">
-           <Type size={14} className="text-indigo-400" />
-           <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-             Timeline Annotation
-           </label>
+          <Type size={14} className="text-indigo-400" />
+          <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            Timeline Annotation
+          </label>
         </div>
-        
+
         <div className="space-y-3">
-           <input 
-             type="text" 
-             value={overlayText}
-             onChange={(e) => setOverlayText(e.target.value)}
-             placeholder="Enter text to overlay..."
-             className="w-full bg-black/30 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:border-indigo-500/50 focus:outline-none transition-all"
-           />
-           
-           {overlayText && (
-             <div className="space-y-3 animate-in slide-in-from-top-2 pt-2">
-               {/* Controls Row */}
-               <div className="flex flex-wrap items-center gap-2">
-                 
-                 {/* Position */}
-                 <div className="flex bg-black/30 rounded-lg p-1 border border-white/5">
-                   <button onClick={() => setOverlayPosition('top')} className={`p-1.5 rounded ${overlayPosition === 'top' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyStart size={14} /></button>
-                   <button onClick={() => setOverlayPosition('center')} className={`p-1.5 rounded ${overlayPosition === 'center' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyCenter size={14} /></button>
-                   <button onClick={() => setOverlayPosition('bottom')} className={`p-1.5 rounded ${overlayPosition === 'bottom' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyEnd size={14} /></button>
-                 </div>
+          <input
+            type="text"
+            value={overlayText}
+            onChange={(e) => setOverlayText(e.target.value)}
+            placeholder="Enter text to overlay..."
+            className="w-full bg-black/30 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:border-indigo-500/50 focus:outline-none transition-all"
+          />
 
-                 {/* Style */}
-                 <div className="flex bg-black/30 rounded-lg p-1 border border-white/5">
-                    <button onClick={() => setOverlayBold(!overlayBold)} className={`p-1.5 rounded ${overlayBold ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><Bold size={14} /></button>
-                    <button onClick={() => setOverlayItalic(!overlayItalic)} className={`p-1.5 rounded ${overlayItalic ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><Italic size={14} /></button>
-                 </div>
+          {overlayText && (
+            <div className="space-y-3 animate-in slide-in-from-top-2 pt-2">
+              {/* Controls Row */}
+              <div className="flex flex-wrap items-center gap-2">
 
-                 {/* Size */}
-                 <div className="flex items-center gap-2 bg-black/30 rounded-lg p-1 px-2 border border-white/5 h-[34px]">
-                    <span className="text-[10px] text-slate-500 uppercase font-bold">Size</span>
-                    <select 
-                      value={overlaySize} 
-                      onChange={(e) => setOverlaySize(e.target.value as any)}
-                      className="bg-transparent text-xs text-white focus:outline-none cursor-pointer"
-                    >
-                      <option value="small">S</option>
-                      <option value="medium">M</option>
-                      <option value="large">L</option>
-                      <option value="massive">XL</option>
-                    </select>
-                 </div>
-               </div>
+                {/* Position */}
+                <div className="flex bg-black/30 rounded-lg p-1 border border-white/5">
+                  <button onClick={() => setOverlayPosition('top')} className={`p-1.5 rounded ${overlayPosition === 'top' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyStart size={14} /></button>
+                  <button onClick={() => setOverlayPosition('center')} className={`p-1.5 rounded ${overlayPosition === 'center' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyCenter size={14} /></button>
+                  <button onClick={() => setOverlayPosition('bottom')} className={`p-1.5 rounded ${overlayPosition === 'bottom' ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><AlignVerticalJustifyEnd size={14} /></button>
+                </div>
 
-               {/* Colors */}
-               <div className="flex flex-wrap gap-2 pt-1">
-                 {colors.map(color => (
-                   <button
-                     key={color}
-                     onClick={() => setOverlayColor(color)}
-                     className={`w-6 h-6 rounded-full transition-all duration-300 ${overlayColor === color ? 'ring-2 ring-white scale-110 shadow-[0_0_10px_currentColor]' : 'opacity-50 hover:opacity-100 hover:scale-105'}`}
-                     style={{ backgroundColor: color }}
-                     aria-label={`Select color ${color}`}
-                   />
-                 ))}
-               </div>
-             </div>
-           )}
+                {/* Style */}
+                <div className="flex bg-black/30 rounded-lg p-1 border border-white/5">
+                  <button onClick={() => setOverlayBold(!overlayBold)} className={`p-1.5 rounded ${overlayBold ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><Bold size={14} /></button>
+                  <button onClick={() => setOverlayItalic(!overlayItalic)} className={`p-1.5 rounded ${overlayItalic ? 'bg-indigo-600 text-white shadow-md' : 'text-slate-400 hover:text-white'}`}><Italic size={14} /></button>
+                </div>
+
+                {/* Size */}
+                <div className="flex items-center gap-2 bg-black/30 rounded-lg p-1 px-2 border border-white/5 h-[34px]">
+                  <span className="text-[10px] text-slate-500 uppercase font-bold">Size</span>
+                  <select
+                    value={overlaySize}
+                    onChange={(e) => setOverlaySize(e.target.value as 'small' | 'medium' | 'large' | 'massive')}
+                    className="bg-transparent text-xs text-white focus:outline-none cursor-pointer"
+                  >
+                    <option value="small">S</option>
+                    <option value="medium">M</option>
+                    <option value="large">L</option>
+                    <option value="massive">XL</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Colors */}
+              <div className="flex flex-wrap gap-2 pt-1">
+                {colors.map(color => (
+                  <button
+                    key={color}
+                    onClick={() => setOverlayColor(color)}
+                    className={`w-6 h-6 rounded-full transition-all duration-300 ${overlayColor === color ? 'ring-2 ring-white scale-110 shadow-[0_0_10px_currentColor]' : 'opacity-50 hover:opacity-100 hover:scale-105'}`}
+                    style={{ backgroundColor: color }}
+                    aria-label={`Select color ${color}`}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
       <div className="pt-2">
-        <Button 
-          onClick={handleGenerate} 
+        <Button
+          onClick={handleGenerate}
           disabled={!isReady || isProcessing}
           isLoading={isProcessing}
           className={`w-full py-4 text-lg font-bold tracking-wide transition-all duration-500
-            ${isReady 
-              ? 'bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 shadow-[0_0_30px_rgba(99,102,241,0.4)] border border-white/10 hover:tracking-widest' 
+            ${isReady
+              ? 'bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 shadow-[0_0_30px_rgba(99,102,241,0.4)] border border-white/10 hover:tracking-widest'
               : 'bg-slate-800 text-slate-500 border border-white/5 cursor-not-allowed grayscale'
             }
           `}
